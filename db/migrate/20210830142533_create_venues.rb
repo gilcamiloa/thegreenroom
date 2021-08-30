@@ -3,7 +3,7 @@ class CreateVenues < ActiveRecord::Migration[6.0]
     create_table :venues do |t|
       t.string :name
       t.text :description
-      t.int :capacity
+      t.integer :capacity
       t.string :location
       t.float :lat
       t.float :long
