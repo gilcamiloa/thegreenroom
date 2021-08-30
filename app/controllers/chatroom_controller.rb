@@ -5,6 +5,7 @@ class ChatroomController < ApplicationController
 
   def create
     @chatroom = Chatroom.new(chatroom_params)
+    @chatroom.save!
   end
 
   def index
