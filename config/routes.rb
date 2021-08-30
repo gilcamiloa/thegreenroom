@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'bookings/new'
+  get 'bookings/index'
   devise_for :users
   root to: 'pages#home'
   resources :venues, only: [:index, :show] do
