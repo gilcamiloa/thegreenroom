@@ -4,7 +4,7 @@ class CreateBookings < ActiveRecord::Migration[6.0]
       t.references :venue, null: false, foreign_key: true
       t.references :user, null: false, foreign_key: true
       t.references :tour, null: true, foreign_key: true
-      t.datetime :dates
+      t.datetime :dates, array: true, default: []
       t.boolean :status
 
       t.timestamps
