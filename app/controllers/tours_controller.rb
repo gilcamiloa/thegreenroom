@@ -11,7 +11,7 @@ class ToursController < ApplicationController
 
   def new
     @tour = Tour.new
-    @booking = Booking.find(params(:booking_id))
+    @booking = Booking.find(params[:booking_id])
   end
 
   def create
