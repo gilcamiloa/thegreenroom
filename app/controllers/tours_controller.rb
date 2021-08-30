@@ -18,7 +18,7 @@ class ToursController < ApplicationController
     @tour = Tour.new(tour_params)
     @booking = Booking.find(params[:booking_id])
     @tour.booking = @booking
-    @tour.start_time = @booking.date
+    @tour.start_time = @booking.dates.first
     @booking.user = current_user
     if @tour.save
       redirect_to tours_path
