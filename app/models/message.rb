@@ -1,6 +1,6 @@
 class Message < ApplicationRecord
   belongs_to :chatroom
   belongs_to :user
-  validate :date, presence: true
-  validate :content, presence: true
+  validates :date, presence: true
+  validates :content, presence: true
 end
