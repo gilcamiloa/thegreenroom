@@ -1,16 +1,20 @@
-<div class="container">
-  <div class="venue_info">
-    <h1><%= @venue.name %></h1>
-    <h3>About Venue:</h3>
-    <p><%= @venue.description %></p>
-    <div class="capacity_container">
-      <p>Capacity: </p>
-      <span><%= @venue.capacity %></span>
+<div class="container d-flex flex-direction-row venue_container mt-4">
+  <div class="row col-5 mr-1 d-flex flex-column m-0">
+    <div class="row venue_info h-50 d-flex flex-column">
+      <h1 class="text-center"><%= @venue.name %></h1>
+      <h3>About Venue:</h3>
+      <div class="capacity_container d-flex flex-direction-row">
+        <p>Capacity: </p>
+        <span class="pl-3"><%= @venue.capacity %></span>
+      </div>
+      <p class="flex-grow-1 d-flex"><%= @venue.description %></p>
     </div>
-    <div class="calendar_container">
+    <div class="row venue_calendar_container h-50">
     </div>
   </div>
-  <div class="venue_gallery">
-
+  <div class="row col-7 ml-2">
+    <div class="venue_gallery">
+    </div>
   </div>
 </div>
+
