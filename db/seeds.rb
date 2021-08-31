@@ -15,7 +15,6 @@ ActiveRecord::Base.connection.reset_pk_sequence!(Venue.table_name)
   user = User.new(
     {
       email: Faker::Internet.email,
-      username: Faker::Name.name,
       band_name: Faker::DcComics.villain,
       password: Faker::ChuckNorris.fact,
       is_band: true,
