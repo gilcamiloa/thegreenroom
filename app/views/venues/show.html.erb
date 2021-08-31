@@ -1,2 +1,16 @@
-<h1>Venues#show</h1>
-<p>Find me in app/views/venues/show.html.erb</p>
+<div class="container">
+  <div class="venue_info">
+    <h1><%= @venue.name %></h1>
+    <h3>About Venue:</h3>
+    <p><%= @venue.description %></p>
+    <div class="capacity_container">
+      <p>Capacity: </p>
+      <span><%= @venue.capacity %></span>
+    </div>
+    <div class="calander_container">
+    </div>
+  </div>
+  <div class="venue_gallery">
+
+  </div>
+</div>
