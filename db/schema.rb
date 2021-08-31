@@ -93,7 +93,7 @@ ActiveRecord::Schema.define(version: 2021_08_30_142752) do
     t.string "location"
     t.float "lat"
     t.float "long"
-    t.datetime "available_dates"
+    t.datetime "available_dates", default: [], array: true
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
