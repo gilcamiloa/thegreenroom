@@ -4,9 +4,9 @@ class CreateVenues < ActiveRecord::Migration[6.0]
       t.string :name
       t.text :description
       t.integer :capacity
-      t.string :location
-      t.float :lat
-      t.float :long
+      t.string :address
+      t.float :latitude
+      t.float :longitude
       t.datetime :available_dates, array: true, default: []
       t.references :user, null: false, foreign_key: true
 

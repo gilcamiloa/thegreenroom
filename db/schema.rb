@@ -90,9 +90,9 @@ ActiveRecord::Schema.define(version: 2021_08_30_142752) do
     t.string "name"
     t.text "description"
     t.integer "capacity"
-    t.string "location"
-    t.float "lat"
-    t.float "long"
+    t.string "address"
+    t.float "latitude"
+    t.float "longitude"
     t.datetime "available_dates", default: [], array: true
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false

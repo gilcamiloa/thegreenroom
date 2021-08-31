@@ -30,9 +30,9 @@ ActiveRecord::Base.connection.reset_pk_sequence!(Venue.table_name)
       description: Faker::Hipster.sentence,
       name: Faker::Hipster.word,
       capacity: Faker::Number.number(digits: 3),
-      location: Faker::Address.full_address,
-      lat: Faker::Address.latitude,
-      long: Faker::Address.longitude,
+      address: Faker::Address.full_address,
+      latitude: Faker::Address.latitude,
+      longitude: Faker::Address.longitude,
       available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
     }
   )
