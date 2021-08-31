@@ -7,7 +7,9 @@
       <p>Capacity: </p>
       <span><%= @venue.capacity %></span>
     </div>
-    <div class="calendar_container">
+    <div class="calendar_container" data-controller="calendar" data-calendar-available_dates="<%= @dates %>">
+      <div id="color-calendar" data-calendar-target="available_dates">
+      </div>
     </div>
   </div>
   <div class="venue_gallery">
