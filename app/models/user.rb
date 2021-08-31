@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :chatrooms, dependent: :destroy
   has_many :tours, dependent: :destroy
   validates :is_band, type: boolean, presence: true
-  validates :username, presence: true
-  validates :band_name, presence: true
+  validates :username, presence: true, uniqueness: true
+  validates :band_name, presence: true, uniqueness: true
   validates :band_description, presence: true
 end
