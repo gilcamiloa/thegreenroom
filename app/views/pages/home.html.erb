@@ -1,8 +1,12 @@
 <div class="d-flex text-center">
-  <div class="artist-container d-flex justify-content-center align-items-center">
+  <%= link_to new_user_registration_path(artist: true) do %>
+    <div class = "artist-container d-flex justify-content-center align-items-center">
     <h1>Artist</h1>
   </div>
+  <% end %>
+  <%= link_to new_venue_path do %>
   <div class="venue-container d-flex justify-content-center align-items-center">
     <h1>Venue</h1>
   </div>
+  <% end %>
 </div>
