@@ -10,6 +10,26 @@
       <p class="flex-grow-1 d-flex"><%= @venue.description %></p>
     </div>
     <div class="row venue_calendar_container h-50">
+<div class="container">
+  <div class="venue_info">
+    <h1><%= @venue.name %></h1>
+    <h3>About Venue:</h3>
+    <p><%= @venue.description %></p>
+    <div class="capacity_container">
+      <p>Capacity: </p>
+      <span><%= @venue.capacity %></span>
+    </div>
+    <div class="calendar_container" data-controller="calendar" data-calendar-available_dates="<%= @dates %>">
+    <%= month_calendar do |day| %>
+      <%= content_tag :div, class: "calendar-day", data: {date: day} do %>
+        <% if @dates.include? day.to_s %>
+          <%= link_to Date.parse(day.to_s).strftime("%d"), '' %>
+        <% else %>
+            <%= Date.parse(day.to_s).strftime("%d") %>
+        <% end %>
+      <% end %>
+    <% end %>
+
     </div>
   </div>
   <div class="row col-7 ml-2">
