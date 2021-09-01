@@ -47,7 +47,6 @@ user4 = User.create!(
 
 puts "...each with 10 venues..."
 
-
 Venue.create!(
   {
     user: user1,
@@ -57,7 +56,7 @@ Venue.create!(
     address: "1A Camden High St, London NW1 7JE",
     latitude: 51.53490452347282,
     longitude: -0.1382036578297606,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -70,7 +69,7 @@ Venue.create!(
     address: "162 Cowley Rd, Oxford OX4 1UE",
     latitude: 51.7474483340786,
     longitude: -1.2359198160312062,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -83,7 +82,7 @@ Venue.create!(
     address: "275 Pentonville Rd, London N1 9NL",
     latitude: 55.18768314660566,
     longitude: -0.3732591234016423,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -96,7 +95,7 @@ Venue.create!(
     address: "451 Queensbridge Rd, London E8 3AS",
     latitude: 51.54588485537989,
     longitude: -0.06996883083933327,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -109,7 +108,7 @@ Venue.create!(
     address: "1A Amhurst Rd, London E8 1LL",
     latitude: 51.54736732957592,
     longitude: -0.05549590373563647,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -122,7 +121,7 @@ Venue.create!(
     address: "33 Queen's Rd, Burley, Leeds LS6 1NY",
     latitude: 53.81003702528193,
     longitude: -1.5707490019270212,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -135,7 +134,7 @@ Venue.create!(
     address: "9 Gun St, Reading RG1 2JR",
     latitude: 51.45418066156674,
     longitude: -0.9729059289974807,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -148,7 +147,7 @@ Venue.create!(
     address: "27 Gloucester Pl, Brighton BN1 4AA",
     latitude: 50.82706295255641,
     longitude: -0.13554771367841525,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -161,7 +160,7 @@ Venue.create!(
     address: "10 Marine Parade, Kemptown, Brighton BN2 1TL",
     latitude: 50.82021860797452,
     longitude: -0.13515515969852593,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -174,7 +173,7 @@ Venue.create!(
     address: "78 Digbeth, Birmingham B5 6DY",
     latitude: 52.47568897825162,
     longitude: -1.887434573137932,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -187,7 +186,7 @@ Venue.create!(
     address: "72, 73 Old Market St, Bristol BS2 0EJ",
     latitude: 51.45579453763902,
     longitude: -2.5828166001624444,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -200,7 +199,7 @@ Venue.create!(
     address: "11 Womanby St, Cardiff CF10 1BR",
     latitude: 51.48062752347235,
     longitude: -3.18141600200651,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -213,7 +212,7 @@ Venue.create!(
     address: "141 St Mary St, Southampton SO14 1NS",
     latitude: 50.90468536022295,
     longitude: -1.3965709173657035,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -226,7 +225,7 @@ Venue.create!(
     address: "139-141 King St, Norwich NR1 1QH",
     latitude: 52.624821537012174,
     longitude: 1.3026603691971537,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -239,7 +238,7 @@ Venue.create!(
     address: "8 Talbot St, Nottingham NG1 5GG",
     latitude: 52.95604063713111,
     longitude: -1.1535966307914982,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -252,7 +251,7 @@ Venue.create!(
     address: "Gandy St, Exeter EX4 3LS",
     latitude: 50.72534481503743,
     longitude: -3.531417002031701,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -265,7 +264,7 @@ Venue.create!(
     address: "West Quay Road Industrial Estate, W Quay Rd, Southampton SO15 1GZ",
     latitude: 50.901424803942824,
     longitude: -1.4116488731908534,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -278,7 +277,7 @@ Venue.create!(
     address: "Westgate Rd, Newcastle upon Tyne NE1 1SW",
     latitude: 54.97059934686987,
     longitude: -1.618745688391332,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -291,7 +290,7 @@ Venue.create!(
     address: "22 University Gardens, Glasgow G12 8QN",
     latitude: 55.87375869587255,
     longitude: -4.291309671174321,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -304,7 +303,7 @@ Venue.create!(
     address: "14-16 Matilda St, Sheffield City Centre, Sheffield S1 4QD",
     latitude: 53.3767839897077,
     longitude: -1.4715925731070467,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -317,7 +316,7 @@ Venue.create!(
     address: "105-107 Beverley Rd, Hull HU3 1TS",
     latitude: 53.753786850106216,
     longitude: -0.3484825098892205,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -330,7 +329,7 @@ Venue.create!(
     address: "Leeds University Union, Lifton Pl, Woodhouse, Leeds LS2 9JT",
     latitude: 53.80680735442232,
     longitude: -1.5559541884321146,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -343,7 +342,7 @@ Venue.create!(
     address: "9-17 Highgate Rd, London NW5 1JY",
     latitude: 51.55233707474113,
     longitude: -0.14192608666418235,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -356,7 +355,7 @@ Venue.create!(
     address: "9, The Arches, Villiers St, London WC2N 6NG",
     latitude: 51.51004639175116,
     longitude: -0.12402377544232435,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -369,20 +368,20 @@ Venue.create!(
     address: "2 Goldhawk Rd, London W12 8QD",
     latitude: 51.50337336871057,
     longitude: -0.2239038155007984,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
 Venue.create!(
   {
     user: user3,
-    name: 'Gloucester Guildhall',
+    name: 'The Lexington',
     capacity: 150,
-    description: "Smart former council chamber with a 100-seat cinema, also for comedy, music and exhibits, plus bar.",
-    address: "23 Eastgate St, Gloucester GL1 1NS",
-    latitude: 51.864840211412826,
-    longitude: -2.244698888498589,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    description: "High-ceilinged bar with sofas, serving US draught beers and whiskies, plus live music room upstairs.",
+    address: "96-98 Pentonville Rd, London N1 9JB",
+    latitude: 51.53189339740316,
+    longitude: -0.11138421511791342,
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -395,7 +394,7 @@ Venue.create!(
     address: "135 Grosvenor St, Manchester M1 7HE",
     latitude: 53.47035634949944,
     longitude: -2.236535859608777,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -408,7 +407,7 @@ Venue.create!(
     address: "Times Square, Newcastle upon Tyne NE1 4EP",
     latitude: 54.96783729038183,
     longitude: -1.6205929865464848,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -421,7 +420,7 @@ Venue.create!(
     address: "11 Hastie's Cl, Edinburgh EH1 1HJ",
     latitude: 55.94875536694201,
     longitude: -3.187539615346592,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -434,7 +433,7 @@ Venue.create!(
     address: "23 Pelham St, Nottingham NG1 2ED",
     latitude: 52.953838035800956,
     longitude: -1.1459592019566012,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -447,7 +446,7 @@ Venue.create!(
     address: "76 Smallbrook Queensway, Birmingham B5 4EG",
     latitude: 52.4762841977671,
     longitude: -1.8975974461478475,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -460,7 +459,7 @@ Venue.create!(
     address: "68 High St, Leicester LE1 5YP",
     latitude: 52.63560429208377,
     longitude: -1.136956230802454,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -473,7 +472,7 @@ Venue.create!(
     address: "Wapping Rd, Bathurst Terrace, Bristol BS1 6UA",
     latitude: 51.44684002605702,
     longitude: -2.59642018851261,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -486,7 +485,7 @@ Venue.create!(
     address: "11-12 Queens Rd, Brighton BN1 3WA",
     latitude: 50.824853862268064,
     longitude: -0.14304914251348885,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -499,7 +498,7 @@ Venue.create!(
     address: "25 Wexford St, Portobello, Dublin 2, D02 H527, Ireland",
     latitude: 53.33672732528841,
     longitude: -6.2657042731084225,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -512,7 +511,7 @@ Venue.create!(
     address: "24 Hardman St, Liverpool L1 9AX",
     latitude: 53.40156738754962,
     longitude: -2.97128394427121,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -525,7 +524,7 @@ Venue.create!(
     address: "272A St Vincent St, Glasgow G2 5RL",
     latitude: 55.86274337556175,
     longitude: -4.264929900009697,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -538,7 +537,7 @@ Venue.create!(
     address: "36 Lime St, Newcastle upon Tyne NE1 2PQ",
     latitude: 54.97526166989169,
     longitude: -1.5918610902361037,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -551,7 +550,7 @@ Venue.create!(
     address: "38 Charles St, Manchester M1 7DB",
     latitude: 53.4740577581536,
     longitude: -2.2381731864789307,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
@@ -564,7 +563,7 @@ Venue.create!(
     address: "The Grove, East Mud Dock, Bristol BS1 4RB",
     latitude: 51.44910333342838,
     longitude: -2.5942372750175253,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
