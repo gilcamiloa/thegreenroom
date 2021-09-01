@@ -32,7 +32,7 @@ ActiveRecord::Base.connection.reset_pk_sequence!(Venue.table_name)
       address: Faker::Address.full_address,
       latitude: Faker::Address.latitude,
       longitude: Faker::Address.longitude,
-      available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+      available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
     }
   )
   venue.save!
