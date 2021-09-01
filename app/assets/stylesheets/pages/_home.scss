@@ -1,6 +1,15 @@
 // Specific CSS for your home-page
-h1 {
+.homepage-link {
   color: white;
+  h1 {
+    padding: 8px 16px;
+    border: 2px dashed #003638;
+    border-radius: 30%;
+  }
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 .artist-container,
@@ -11,19 +20,23 @@ h1 {
 }
 
 .artist-container {
-  background: url(asset_path("home/koko-confetti-bw-left"));
+  background: url(asset_path("venue/venue-login-bw-left"));
+  // background: url(asset_path("home/koko-confetti-bw-left"));
   background-position: bottom;
   &:hover {
-    background: url(asset_path("home/koko-confetti-recolour-left"));
+    background: url(asset_path("venue/venue-login-recolour-left"));
+    // background: url(asset_path("home/koko-confetti-recolour-left"));
     background-position: bottom;
   }
 }
 
 .venue-container {
-  background: url(asset_path("home/koko-confetti-bw-right"));
+  background: url(asset_path("venue/venue-login-bw-right"));
+  // background: url(asset_path("home/koko-confetti-bw-right"));
   background-position: bottom;
   &:hover {
-    background: url(asset_path("home/koko-confetti-recolour-right"));
+    background: url(asset_path("venue/venue-login-recolour-right"));
+    // background: url(asset_path("home/koko-confetti-recolour-right"));
     background-position: bottom;
   }
 }
