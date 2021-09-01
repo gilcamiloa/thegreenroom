@@ -8,8 +8,16 @@
       <span><%= @venue.capacity %></span>
     </div>
     <div class="calendar_container" data-controller="calendar" data-calendar-available_dates="<%= @dates %>">
-      <div id="color-calendar" data-calendar-target="available_dates">
-      </div>
+    <%= month_calendar do |day| %>
+      <%= content_tag :div, class: "calendar-day", data: {date: day} do %>
+        <% if @dates.include? day.to_s %>
+          <%= link_to Date.parse(day.to_s).strftime("%d"), '' %>
+        <% else %>
+            <%= Date.parse(day.to_s).strftime("%d") %>
+        <% end %>
+      <% end %>
+    <% end %>
+
     </div>
   </div>
   <div class="venue_gallery">
