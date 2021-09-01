@@ -11,7 +11,7 @@ Venue.destroy_all
 ActiveRecord::Base.connection.reset_pk_sequence!(User.table_name)
 ActiveRecord::Base.connection.reset_pk_sequence!(Venue.table_name)
 
-puts "Creating 3 venue owners..."
+puts "Creating 4 venue owners..."
 
 user1 = User.create!(
   {
@@ -37,7 +37,29 @@ user3 = User.create!(
   }
 )
 
-puts "Creating venues..."
+user4 = User.create!(
+  {
+    email: Faker::Internet.email,
+    password: Faker::ChuckNorris.fact,
+    is_band: false
+  }
+)
+
+puts "...each with 10 venues..."
+
+
+Venue.create!(
+  {
+    user: user1,
+    name: 'KOKO',
+    capacity: 1300,
+    description: "Live, big-name indie, rock and dance music plus club nights in palatial former theatre.",
+    address: "1A Camden High St, London NW1 7JE",
+    latitude: 51.53490452347282,
+    longitude: -0.1382036578297606,
+    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
+  }
+)
 
 Venue.create!(
   {
@@ -158,7 +180,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user2,
     name: 'Exchange',
     capacity: 200,
     description: "Exchange opened it’s doors as a Live Music / Club Venue in August 2012. Since opening we have played host to a wide array of artists including The 1975, Haim, George Ezra, Rag n Bone Man, (the) Melvins, Four Tet, IDLES, Sleaford Mods and many more.",
@@ -171,7 +193,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user2,
     name: 'Clwb Ifor Bach',
     capacity: 300,
     description: "Rock club focuses on homegrown acts, with low key shows by big names, but also features dance music.",
@@ -184,7 +206,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user2,
     name: 'The Joiners',
     capacity: 200,
     description: "Intimate pub live music venue hosting eclectic programme of up-and-coming and established acts.",
@@ -197,7 +219,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user2,
     name: 'The Adrian Flux Waterfront',
     capacity: 200,
     description: "All-standing, riverside nightclub and live music venue run by the student union with regular gigs.",
@@ -210,7 +232,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user2,
     name: 'Rock City',
     capacity: 1900,
     description: "Popular independent stage for up-and-coming bands, including many student gigs and club nights.",
@@ -223,7 +245,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user2,
     name: 'Exeter Phoenix',
     capacity: 510,
     description: "Multi-use arts venue with film and gig auditorium, gallery spaces, recording studio and a cafe-bar.",
@@ -236,7 +258,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user2,
     name: 'Engine Rooms',
     capacity: 400,
     description: "Entertainment hub with roller disco for adults and kids, dance lessons, club nights and live bands.",
@@ -249,7 +271,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user2,
     name: 'O2 Academy 2, Newcastle',
     capacity: 380,
     description: "Live music venue in refurbished bingo hall, hosting rock and pop acts and weekly club nights.",
@@ -262,7 +284,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user2,
     name: 'Queen Margaret Union',
     capacity: 900,
     description: "Student Union for QMU, hosting live music nights and entertainment throughout the week.",
@@ -275,7 +297,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user2,
     name: 'Plug',
     capacity: 350,
     description: "3-room nightspot hosting diverse programme of live music and weekly club nights.",
@@ -288,7 +310,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user3,
     name: 'The Welly',
     capacity: 350,
     description: "Club nights and gigs in a sumptuous ballroom, intimate lounge or alternative upstairs space.",
@@ -301,7 +323,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user3,
     name: 'Stylus',
     capacity: 150,
     description: "The clubbing component of Leeds University's Union building, hosting live and DJ'd music events.",
@@ -314,7 +336,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user3,
     name: 'O2 Forum Kentish Town',
     capacity: 2300,
     description: "Eclectic programme of major live bands and club nights in former art deco cinema.",
@@ -327,7 +349,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user3,
     name: 'Heaven',
     capacity: 1000,
     description: "Long-running gay nightclub in vaulted Charing Cross cellars hosting big weekly scene parties.",
@@ -340,7 +362,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user3,
     name: 'Sindecombe Social',
     capacity: 300,
     description: "Smart bar with plates displayed on exposed brickwork, hanging lamps plus craft beers and pub grub.",
@@ -353,7 +375,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user3,
     name: 'Gloucester Guildhall',
     capacity: 150,
     description: "Smart former council chamber with a 100-seat cinema, also for comedy, music and exhibits, plus bar.",
@@ -366,7 +388,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user3,
     name: 'The Deaf Institute',
     capacity: 260,
     description: "Landmark building housing plush basement bar, cafe/bar and upstairs music hall with smoking terrace.",
@@ -379,7 +401,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user3,
     name: 'Think Tank?',
     capacity: 200,
     description: "To date, the venue has hosted many notable acts. Bands and artists such as Wolf Alice, The 1975, Sam Fender, Peace, Drenge and Royal Blood have cut their teeth at the venue when first starting out.",
@@ -392,7 +414,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user3,
     name: 'La Belle Angele',
     capacity: 190,
     description: "Longstanding nightclub was renovated after a fire & hosts a range of varied DJ nights & live music events.",
@@ -405,7 +427,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user3,
     name: 'The Bodega',
     capacity: 220,
     description: "Venue for gigs by rising musicians, nightclub with themed music nights and bar with a beer garden.",
@@ -418,7 +440,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user4,
     name: 'The Sunflower Lounge',
     capacity: 120,
     description: "The Sunflower Lounge brings the glamour and grunge of New York dive bars to the centre of Birmingham. We have showcased the best of underground, breaking and local talent, with intimate performances from the likes of Peace, The Amazons, Foals, Wolf Alice, Royal Blood, Dua Lipa, Rat Boy, Superfood and many more...",
@@ -431,7 +453,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user4,
     name: 'The Cookie',
     capacity: 180,
     description: "Coffee bar by day, turns into an arty bar scene by night with live music and comedy in cellar.",
@@ -444,7 +466,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user4,
     name: 'The Louisiana',
     capacity: 130,
     description: "Live bands nightly in a cosy room above a sprawling wood-floored pub and former seafarers' hotel.",
@@ -457,7 +479,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user4,
     name: 'The Hope & Ruin',
     capacity: 140,
     description: "Lively, laid-back pub with reclaimed vibe, for craft beers and live bands in upstairs music space.",
@@ -470,7 +492,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user4,
     name: "Whelan's",
     capacity: 300,
     description: "Venue for live music and clubs or relaxing in The Parlour, decorated in 1950s sitting room-style.",
@@ -483,7 +505,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user4,
     name: 'Buyers Club',
     capacity: 250,
     description: "Hip locale & event space with a verdant terrace offering craft ales, cocktails, wine & small plates.",
@@ -496,7 +518,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user4,
     name: "King Tut's Wah Wah Hut",
     capacity: 300,
     description: "Mighty concert room for up-and-coming local bands and cult international acts serving own lager.",
@@ -509,7 +531,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user4,
     name: 'The Cluny 2',
     capacity: 270,
     description: "Iconic Newcastle music venue, bar, & kitchen. Independent since 2017.",
@@ -522,7 +544,7 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user4,
     name: 'YES',
     capacity: 270,
     description: "Four floors of YES. A quirky, cool venue with all the mod-cons required of a live music venue.",
@@ -535,26 +557,13 @@ Venue.create!(
 
 Venue.create!(
   {
-    user: user1,
+    user: user4,
     name: 'Thekla',
     capacity: 400,
     description: "Live music and club nights on two floors of a large moored boat with a Banksy graffiti on the hull.",
     address: "The Grove, East Mud Dock, Bristol BS1 4RB",
     latitude: 51.44910333342838,
     longitude: -2.5942372750175253,
-    available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
-  }
-)
-
-Venue.create!(
-  {
-    user: user1,
-    name: 'KOKO',
-    capacity: 1300,
-    description: "Live, big-name indie, rock and dance music plus club nights in palatial former theatre.",
-    address: "1A Camden High St, London NW1 7JE",
-    latitude: 51.53490452347282,
-    longitude: -0.1382036578297606,
     available_dates: [Faker::Date.forward(days: 9), Faker::Date.forward(days: 12), Faker::Date.forward(days: 15)]
   }
 )
