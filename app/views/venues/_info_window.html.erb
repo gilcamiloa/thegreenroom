@@ -1,4 +1,9 @@
-<%= venue.name %>
-<%= venue.address %>
-<%= venue.description %>
-<%= venue.capacity %>
+<div class="venue-info">
+  <div class="venue-img">
+  </div>
+  <div class="venue-text">
+    <h5><%= venue.name %></h5>
+    <p>Capacity: <%= venue.capacity %></p> <p><%= venue.address %></p>
+  </div>
+</div>
+<div class="button-container"><%= link_to "About #{venue.name}", venue_path(venue), class: "venue-show-btn"%></div>

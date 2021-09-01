@@ -1,8 +1,41 @@
+// #map { width: 100%; height:100%}
 .mapboxgl-popup {
-  max-width: 200px;
+  max-width: 350px;
+}
+.venue-info {
+  display: flex;
+  justify-content: center;
+  margin-bottom:5px;
+}
+.venue-img {
+  height: 100px;
+  width: 100px;
+  background-color: grey;
+  flex-shrink: 0;
+  margin: 5px;
 }
 
-.mapboxgl-popup-content {
+.venue-text {
+  // height: 120px;
+  background-color: white;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  line-height: 1;
 }
+.button-container {
+  // height: 25px;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+
+}
+.venue-show-btn {
+  background-color: grey;
+  padding: 10px 15px;
+  border-radius: 5%;
+  color:white;
+  text-decoration: none;
+}
+// .mapboxgl-popup-content {
+
+// }
