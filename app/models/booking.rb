@@ -5,5 +5,4 @@ class Booking < ApplicationRecord
   validates :venue, presence: true
   validates :user, presence: true
   validates :dates, presence: true
-  validates :status, presence: true, inclusion: [true, false]
 end
