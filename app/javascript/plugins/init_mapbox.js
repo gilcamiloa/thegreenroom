@@ -5,11 +5,10 @@ const buildMap = (mapElement) => {
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
   return new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11'
-    // style: 'mapbox://styles/k06kw02/ckszz90e17sx618o7dcya4qv9'
-
+    style: 'mapbox://styles/k06kw02/ckszz90e17sx618o7dcya4qv9'
   });
 };
+// style: 'mapbox://styles/mapbox/streets-v11'
 
 const addMarkersToMap = (map, markers) => {
   markers.forEach((marker) => {
