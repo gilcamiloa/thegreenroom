@@ -1,0 +1,11 @@
+.background-image {
+  background: url(asset_path("session/session-bw"));
+  background-size: cover;
+}
+
+.form-container {
+  max-width: 450px;
+  height: 100vh;
+  background-color: #303030;
+  opacity: .85;
+}
