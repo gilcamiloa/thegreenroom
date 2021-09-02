@@ -16,8 +16,9 @@
         <%= f.input :band_description,
                     required: true,
                     autofocus: true%>
-        <%= f.input :photo, as: :file %>
+        <%# remember to add to views/registrations/new.html.erb after logins pr %>
       <% end %>
+        <%= f.input :photo, as: :file %>
 
 
       <%= f.input :password,
