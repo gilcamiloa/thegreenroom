@@ -567,6 +567,17 @@ Venue.create!(
   }
 )
 
+10.times do
+  Tour.create!(
+    {
+      user: [user1, user2, user3, user4].sample,
+      name: 'apple pie',
+      start_date: Faker::Date.forward(days: 2),
+      end_date: Faker::Date.forward(days: 9)
+    }
+  )
+end
+
 puts "Finished seeding #{Venue.count} venues!"
 
 puts "Creating the test venue owner..."

@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <% if params[:controller] == 'venues' %>
+    <% if params[:controller] == 'venues' || 'tours' || 'bookings'%>
       <%= render 'shared/navbar' %>
     <% end %>
     <%= render 'shared/flashes' %>
