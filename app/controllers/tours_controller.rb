@@ -11,17 +11,13 @@ class ToursController < ApplicationController
 
   def new
     @tour = Tour.new
-    @booking = Booking.find(params[:booking_id])
   end
 
   def create
     @tour = Tour.new(tour_params)
-    @booking = Booking.find(params[:booking_id])
-    @tour.booking = @booking
-    @tour.start_time = @booking.dates.first
-    @booking.user = current_user
+    @tour.user = current_user
     if @tour.save
-      redirect_to tours_path
+      redirect_to tour_path(@tour)
     else
       render :new
     end
@@ -32,7 +28,7 @@ class ToursController < ApplicationController
   private
 
   def tour_params
-    params.require(:tour).permit(:name, :start_time)
+    params.require(:tour).permit(:name, :start_date, :end_date)
   end
 
   def set_tour
