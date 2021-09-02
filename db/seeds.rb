@@ -598,7 +598,7 @@ User.create!(
   {
     email: 'demoband@venue.com',
     password: 123123,
-    is_band: false
+    is_band: true
   }
 )
 
