@@ -1,0 +1,7 @@
+<h1 class="title"><%= @tour.name %></h1>
+<% @tour.booking.each do |booking| %>
+
+<h2 class="venue_info"><%= booking.venue.name %></h2>
+<p class="address"><%= booking.venue.address %></p>
+<p class="date"><%= booking.date %></p>
+<% end %>

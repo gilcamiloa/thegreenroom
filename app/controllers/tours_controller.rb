@@ -32,7 +32,8 @@ class ToursController < ApplicationController
   private
 
   def tour_params
-    params.require(:tour).permit(:name, :start_time)
+    params.require(:tour).permit(:name)
+    # params.require(:tour).permit(:name, :start_time)
   end
 
   def set_tour
