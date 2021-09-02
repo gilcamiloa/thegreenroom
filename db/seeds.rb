@@ -8,7 +8,11 @@
 
 User.destroy_all
 Venue.destroy_all
+Tour.destroy_all
+Booking.destroy_all
 ActiveRecord::Base.connection.reset_pk_sequence!(User.table_name)
+ActiveRecord::Base.connection.reset_pk_sequence!(Tour.table_name)
+ActiveRecord::Base.connection.reset_pk_sequence!(Booking.table_name)
 ActiveRecord::Base.connection.reset_pk_sequence!(Venue.table_name)
 
 puts "Creating 4 venue owners..."
@@ -579,4 +583,21 @@ User.create!(
   }
 )
 
+User.create!(
+  {
+    email: 'demoband@venue.com',
+    password: 123123,
+    is_band: false
+  }
+)
+
+10.times do
+  Booking.create!(
+    {
+      venue: Venue.all.sample,
+      user: User.all.sample,
+      dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 5), Faker::Date.forward(days: 12)]
+    }
+  )
+end
 puts "Seed complete 🤘"
