@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new
-    @booking.dates = params[:booking][:dates].split(', ').map do |date|
+    @booking.dates = params[:booking][:dates].split(',').map do |date|
       Date.parse(date).to_datetime
     end
     @venue = Venue.find(params[:venue_id])
