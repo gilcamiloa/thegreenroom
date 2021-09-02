@@ -1,5 +1,5 @@
 class ToursController < ApplicationController
-  before_action :set_tour, only: %i[new create show index]
+  before_action :set_tour, only: %i[show index]
 
   def index
     if params[:user_id]
