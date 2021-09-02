@@ -1,10 +1,29 @@
 // Specific CSS for your home-page
+h1 {
+  color: white;
+}
 
 .artist-container,
 .venue-container {
   height: 100vh;
   width: 50vw;
+  transition: .4s;
 }
 
 .artist-container {
+  background: url(asset_path("home/koko-confetti-bw-left"));
+  background-position: bottom;
+  &:hover {
+    background: url(asset_path("home/koko-confetti-recolour-left"));
+    background-position: bottom;
+  }
+}
+
+.venue-container {
+  background: url(asset_path("home/koko-confetti-bw-right"));
+  background-position: bottom;
+  &:hover {
+    background: url(asset_path("home/koko-confetti-recolour-right"));
+    background-position: bottom;
+  }
 }
