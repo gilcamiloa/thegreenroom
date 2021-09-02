@@ -575,7 +575,7 @@ Venue.create!(
   Tour.create!(
     {
       user: [user1, user2, user3, user4].sample,
-      name: 'apple pie',
+      name: Faker::Hipster.sentence(word_count: 3),
       start_date: Faker::Date.forward(days: 2),
       end_date: Faker::Date.forward(days: 9)
     }
@@ -607,7 +607,8 @@ User.create!(
     {
       venue: Venue.all.sample,
       user: User.all.sample,
-      dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 5), Faker::Date.forward(days: 12)]
+      dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 5), Faker::Date.forward(days: 12)],
+      tour: Tour.all.sample
     }
   )
 end

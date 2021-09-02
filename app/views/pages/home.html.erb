@@ -2,7 +2,9 @@
   <div id='navbar-homepage'><%= render 'shared/navbar' %></div>
   <%= link_to new_user_registration_path(artist: true), class: 'homepage-link' do %>
     <div class = "artist-container d-flex justify-content-center align-items-center">
-    <h1>Artist</h1>
+    <%= link_to new_tour_path do %>
+      <h1>Artist</h1>
+    <% end %>
   </div>
   <% end %>
   <%= link_to new_venue_path, class: 'homepage-link' do %>
