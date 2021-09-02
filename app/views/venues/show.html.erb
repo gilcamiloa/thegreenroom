@@ -10,21 +10,34 @@
       <p class="flex-grow-1 d-flex"><%= @venue.description %></p>
     </div>
     <div class="row venue_calendar_container h-50">
-      <div class="calendar_container w-100 h-100" data-controller="calendar" data-calendar-available_dates="<%= @dates %>">
-      <%= month_calendar do |day| %>
-        <%= content_tag :div, class: "calendar-day", data: {date: day} do %>
-          <% if @dates.include? day.to_s %>
-            <%= link_to Date.parse(day.to_s).strftime("%d"), '' %>
-          <% else %>
-              <%= Date.parse(day.to_s).strftime("%d") %>
+      <div class="calendar_container w-100 h-100" data-controller="calendar" data-calendar-available_dates="<%= @available_dates %>">
+        <%= month_calendar do |day| %>
+          <%= content_tag :div, class: "calendar-day", data: {date: day} do %>
+            <% if @available_dates.include? day.to_s %>
+              <%= link_to Date.parse(day.to_s).strftime("%d"),'',remote: true,:'data-date' => day, data: { controller: 'calendar',calendar_target: "date", action: 'click->calendar#append' } %>
+            <% else %>
+                <%= Date.parse(day.to_s).strftime("%d") %>
+            <% end %>
           <% end %>
         <% end %>
-      <% end %>
+        <%= simple_form_for [@venue, @booking]  do |f| %>
+          <%= f.input :dates, default: [], multiple: true, as: :hidden, html5: true %>
+          <%= f.button :submit %>
+        <% end %>
       </div>
   </div>
 </div>
   <div class="row col-7 ml-2">
     <div class="venue_gallery">
+      <img src="https://via.placeholder.com/150C/Ohttps://placeholder.com/" alt="">
+      <img src="https://via.placeholder.com/150C/Ohttps://placeholder.com/" alt="">
+      <img src="https://via.placeholder.com/150C/Ohttps://placeholder.com/" alt="">
+      <img src="https://via.placeholder.com/150C/Ohttps://placeholder.com/" alt="">
+      <img src="https://via.placeholder.com/150C/Ohttps://placeholder.com/" alt="">
+      <img src="https://via.placeholder.com/150C/Ohttps://placeholder.com/" alt="">
+      <img src="https://via.placeholder.com/150C/Ohttps://placeholder.com/" alt="">
+      <img src="https://via.placeholder.com/150C/Ohttps://placeholder.com/" alt="">
+      <img src="https://via.placeholder.com/150C/Ohttps://placeholder.com/" alt="">
     </div>
   </div>
 </div>

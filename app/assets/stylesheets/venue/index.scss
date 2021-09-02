@@ -5,8 +5,13 @@
 
 .venue_gallery {
   background-color: #E5E5E5;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   height: 100%;
-  width:100%
+  width:100%;
+  padding: 15px;
+  align-items: center;
+  justify-items: center;
 }
 
 .venue_info {
@@ -23,5 +28,5 @@
 }
 
 .simple-calendar .day {
-  height: 52px;
+  height: 41px;
 }
