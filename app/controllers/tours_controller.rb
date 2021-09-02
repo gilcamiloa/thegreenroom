@@ -1,5 +1,5 @@
 class ToursController < ApplicationController
-  before_action :set_tour, only: %i[new create show index]
+  before_action :set_tour, only: %i[show index]
 
   def index
     if params[:user_id]
@@ -11,7 +11,7 @@ class ToursController < ApplicationController
 
   def new
     @tour = Tour.new
-    @booking = Booking.find(params[:booking_id])
+    # @booking = Booking.find(params[:booking_id])
   end
 
   def create
