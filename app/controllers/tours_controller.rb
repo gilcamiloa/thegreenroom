@@ -1,5 +1,5 @@
 class ToursController < ApplicationController
-  before_action :set_tour, only: %i[new create show index]
+  before_action :set_tour, only: %i[show index]
 
   def index
     if params[:user_id]
@@ -23,7 +23,16 @@ class ToursController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @venues = Tour.find(params[:id]).venues
+    @markers = @venues.geocoded.map do |venue|
+      {
+        lat: venue.latitude,
+        lng: venue.longitude,
+        info_window: render_to_string(partial: "venues/info_window", locals: { venue: venue })
+      }
+    end
+  end
 
   private
 
