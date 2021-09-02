@@ -29,4 +29,14 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
+  const markers = document.querySelectorAll('.mapboxgl-marker');
+  markers.forEach((marker) => {
+    marker.addEventListener('click', () => {
+      const id = marker.dataset.id
+      const card = document.getElementById(`venue${id}`)
+      setTimeout(() => {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      })
+    });
+  });
 })

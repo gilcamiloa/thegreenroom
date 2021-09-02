@@ -13,7 +13,13 @@ const buildMap = (mapElement) => {
 const addMarkersToMap = (map, markers) => {
   markers.forEach((marker) => {
     const popup = new mapboxgl.Popup().setHTML(marker.info_window);
-    new mapboxgl.Marker()
+    const el = document.createElement('div')
+    el.setAttribute('data-id', marker.id)
+    el.setAttribute('aria-label', "Map marker")
+    el.setAttribute('class', "mapboxgl-marker mapboxgl-marker-anchor-center")
+    el.setAttribute('class', "transform: translate(-50%, -50%) translate(425px, 415px) rotateX(0deg) rotateZ(0deg)")
+
+    new mapboxgl.Marker(el)
       .setLngLat([marker.lng, marker.lat])
       .setPopup(popup)
       .addTo(map);
