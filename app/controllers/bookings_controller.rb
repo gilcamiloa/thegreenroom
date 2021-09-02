@@ -1,6 +1,12 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.all
+    if params[:tour_id]
+      @bookings = Tour.find(params[:toud_id]).bookings
+    elsif params[:venue_id]
+      @bookings = Venue.find(params[:venue_id]).bookings
+    else
+      @bookings = Booking.all
+    end
   end
 
   def new
@@ -13,8 +19,9 @@ class BookingsController < ApplicationController
       Date.parse(date).to_datetime
     end
     @venue = Venue.find(params[:venue_id])
-    @booking.user = current_user
     @booking.venue = @venue
+    @bookings.tour = Tour.find(params[:tour_id]) if params[:tour_id]
+    @booking.user = current_user
     @booking.status = false
     if @booking.save!
       # placeholder path untill we have a bookings page
