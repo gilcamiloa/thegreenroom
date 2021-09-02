@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     resources :messages, only: [:new]
   end
 
-  resources :tours, only: [:new, :show, :index] do
+  resources :tours, only: [:new, :create, :show, :index] do
     resources :bookings, only: [:show, :index]
   end
 end
