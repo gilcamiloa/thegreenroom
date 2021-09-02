@@ -4,9 +4,13 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     # For additional fields in app/views/devise/registrations/new.html.erb
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:band_name, :band_description])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:band_name, :band_description, :is_band])
 
     # For additional in app/views/devise/registrations/edit.html.erb
-    devise_parameter_sanitizer.permit(:account_update, keys: [:band_name, :band_description])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:band_name, :band_description, :is_band])
+  end
+
+  def after_sign_up_path_for(resource)
+    new_tour_path
   end
 end
