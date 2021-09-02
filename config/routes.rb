@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     resources :messages, only: [:new]
   end
 
-  resources :tours, only: [:new, :show, :index]
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :tours, only: [:new, :show, :index] do
+    resources :bookings, only: [:show, :index]
+  end
 end

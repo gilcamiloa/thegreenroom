@@ -5,7 +5,7 @@ class ToursController < ApplicationController
     if params[:user_id]
       @tours = User.find(params[:user_id]).tours
     else
-      @tours = Tours.all.order(start_time: :DESC)
+      @tours = Tour.all.order(start_date: :DESC)
     end
   end
 
@@ -36,6 +36,8 @@ class ToursController < ApplicationController
   end
 
   def set_tour
-    @tour = Tour.find(params[:id])
+    if params[:id]
+      @tour = Tour.find(params[:id])
+    end
   end
 end
