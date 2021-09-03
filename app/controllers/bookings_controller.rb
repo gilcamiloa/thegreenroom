@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
   def index
     if params[:tour_id]
-      @bookings = Tour.find(params[:toud_id]).bookings
+      @bookings = Tour.find(params[:tour_id]).bookings
     elsif params[:venue_id]
       @bookings = Venue.find(params[:venue_id]).bookings
     else
@@ -18,8 +18,9 @@ class BookingsController < ApplicationController
     @booking.dates = params[:booking][:dates].split(',').map do |date|
       Date.parse(date).to_datetime
     end
-    @tour = Tour.find(params[:tour_id])
-    @booking.venue = @venue
+    @booking.venue = Venue.find(params[:venue_id])
+    @tour = Tour.find(params[:booking][:tour_id])
+    @booking.tour = @tour
     @booking.user = current_user
     @booking.status = false
     if @booking.save!
