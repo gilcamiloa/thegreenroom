@@ -17,7 +17,6 @@ class ToursController < ApplicationController
     @tour = Tour.new(tour_params)
     @tour.user = current_user
     if @tour.save
-      raise
       redirect_to tour_path(@tour)
     else
       render :new
