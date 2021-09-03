@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations" }
   root to: 'pages#home'
 
   resources :venues, only: [:index, :show, :new, :create] do
-    resources :bookings, only: [:new, :index, :create]
+    resources :bookings, only: [ :index ]
     resources :reviews, only: [:new]
   end
 
@@ -16,6 +16,6 @@ Rails.application.routes.draw do
   end
 
   resources :tours, only: [:new, :create, :show, :index] do
-    resources :bookings, only: [:show, :index]
+    resources :bookings, only: [:new, :create, :show, :index]
   end
 end
