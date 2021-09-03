@@ -18,6 +18,22 @@
   height: 100%;
 }
 
+.venue_info__small {
+  height: 40%;
+}
+
+.venue_calendar__submit-container {
+  text-align: center;
+  position: relative;
+}
+
+.venue_calendar__submit-button {
+  background-color: #b5e48c;
+  position: absolute;
+  bottom: -27px;
+  left: 32%;
+}
+
 .venue_calendar_container {
   background-color: #E5E5E5;
   margin-left: -8.5px;
