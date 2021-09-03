@@ -30,3 +30,11 @@
 .simple-calendar .day {
   height: 41px;
 }
+
+.venue span {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+}

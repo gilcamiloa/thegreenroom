@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <% unless params[:controller] == 'pages' || user_signed_in? == false %>
+    <% unless params[:controller] == 'pages' || user_signed_in? == false || current_page?(:controller => 'venues', :action => 'new')%>
       <%= render 'shared/navbar' %>
     <% end %>
     <%= render 'shared/flashes' %>

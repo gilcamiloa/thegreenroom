@@ -493,18 +493,18 @@ Venue.create!(
   }
 )
 
-Venue.create!(
-  {
-    user: user4,
-    name: "Whelan's",
-    capacity: 300,
-    description: "Venue for live music and clubs or relaxing in The Parlour, decorated in 1950s sitting room-style.",
-    address: "25 Wexford St, Portobello, Dublin 2, D02 H527, Ireland",
-    latitude: 53.33672732528841,
-    longitude: -6.2657042731084225,
-    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
-  }
-)
+# Venue.create!(
+#   {
+#     user: user4,
+#     name: "Whelan's",
+#     capacity: 300,
+#     description: "Venue for live music and clubs or relaxing in The Parlour, decorated in 1950s sitting room-style.",
+#     address: "25 Wexford St, Portobello, Dublin 2, D02 H527, Ireland",
+#     latitude: 53.33672732528841,
+#     longitude: -6.2657042731084225,
+#     available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
+#   }
+# )
 
 Venue.create!(
   {
