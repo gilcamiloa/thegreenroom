@@ -1,12 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-require "open-uri"
-
+# # This file should contain all the record creation needed to seed the database with its default values.
+# # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+# #
+# # Examples:
+# #
+# #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+# #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
+require 'rest-client'
 User.destroy_all
 Venue.destroy_all
 Tour.destroy_all
@@ -65,10 +65,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -83,10 +83,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -101,10 +101,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -119,10 +119,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -137,10 +137,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -155,10 +155,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -173,10 +173,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -191,10 +191,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -209,10 +209,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -227,10 +227,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -245,10 +245,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -263,10 +263,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -281,10 +281,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -299,10 +299,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -317,10 +317,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -335,10 +335,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -353,10 +353,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -371,10 +371,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -389,10 +389,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -407,10 +407,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -425,10 +425,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -443,10 +443,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -461,10 +461,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -479,10 +479,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -497,10 +497,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -515,10 +515,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -533,10 +533,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -551,10 +551,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -569,10 +569,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -587,10 +587,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -605,10 +605,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -623,10 +623,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -641,10 +641,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -659,10 +659,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -677,10 +677,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -695,10 +695,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -713,10 +713,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -731,10 +731,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -749,10 +749,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 venue = Venue.create!(
   {
@@ -767,10 +767,10 @@ venue = Venue.create!(
   }
 )
 
-file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 10.times do
   Tour.create!(
@@ -813,4 +813,25 @@ User.create!(
     }
   )
 end
+
+results = []
+16.times do |i|
+  response = RestClient.get "https://api.unsplash.com/search/photos?page=#{i + 1}&query=live-music-venues&client_id=#{ENV['UNSPLASH_API_KEY']}&per_page=20"
+
+  response = JSON.parse(response)
+
+  results += response['results']
+end
+group_urls = results.map { |result| result['urls']['full'] }.in_groups_of(8, false)
+
+
+Venue.all.each_with_index do |venue, index|
+  puts "Creating images for #{venue.name}..."
+  group_urls[index].each_with_index do |url, url_index|
+    puts "image #{url_index + 1}"
+    file = URI.open(url)
+    venue.photos.attach(io: file, filename: "#{venue.name}-#{url_index}.jpg", content_type: 'image/jpg')
+  end
+end
+
 puts "Seed complete 🤘"
