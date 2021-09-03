@@ -1,16 +1,16 @@
 <div class='col-12 d-flex flex-row container'> 
-  <div class="col-4 card-container mt-3 pl-0">
+  <div class="col-4 venue card-container mt-3 pl-0">
       <% @venues.each do |venue| %>
-        <%= link_to tour_path(venue) do %>
-          <div class="card-product" id="venue<%=venue.id%>">
+        <%= link_to venue_path(venue) do %>
+          <div class="card-product col-12" id="venue<%=venue.id%>">
             <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-            <div class="card-product-infos">
+            <div class="card-product-infos col-9">
               <h2><%= venue.name %></h2>
-              <span>
-                start date:
+              <span class="venue">
+                <%= venue.description %>
               </span>
               <span>
-                end date:
+                capacity: <%= venue.capacity %>
               </span>
             </div>
           </div>
