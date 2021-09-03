@@ -18,6 +18,7 @@ class BookingsController < ApplicationController
     @booking.dates = params[:booking][:dates].split(',').map do |date|
       Date.parse(date).to_datetime
     end
+    @booking.dates = @booking.dates.sort
     @booking.venue = Venue.find(params[:venue_id])
     @tour = Tour.find(params[:booking][:tour_id])
     @booking.tour = @tour

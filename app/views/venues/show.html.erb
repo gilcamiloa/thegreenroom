@@ -1,6 +1,6 @@
 <div class="container d-flex flex-direction-row venue_container mt-4">
   <div class="row col-5 d-flex flex-column m-0">
-    <div class="row venue_info ml-1 h-50 d-flex flex-column">
+    <div class="row venue_info ml-1 venue_info__small d-flex flex-column">
       <h1 class="text-center"><%= @venue.name %></h1>
       <h3>About Venue:</h3>
       <div class="capacity_container d-flex flex-direction-row">
@@ -16,14 +16,18 @@
             <% if @available_dates.include? day.to_s %>
               <%= link_to Date.parse(day.to_s).strftime("%d"),'',remote: true,:'data-date' => day, data: { controller: 'calendar',calendar_target: "date", action: 'click->calendar#append' } %>
             <% else %>
+              <span class="calendar__date">
                 <%= Date.parse(day.to_s).strftime("%d") %>
+              </span>
             <% end %>
           <% end %>
         <% end %>
         <%= simple_form_for [@venue, @booking]  do |f| %>
           <%= f.input :dates, default: [], multiple: true, as: :hidden, html5: true %>
           <%= f.input :tour_id, collection: Tour.where(user: current_user) %>
-          <%= f.button :submit %>
+          <div class="venue_calendar__submit-container">
+            <%= f.button :submit, class: 'venue_calendar__submit-button' %>
+          </div>
         <% end %>
       </div>
   </div>
