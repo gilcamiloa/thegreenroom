@@ -1,21 +1,26 @@
-<div class='col-12 d-flex flex-row container'> 
+<div class='col-12 d-flex flex-row container'>
   <div class="col-4 venue card-container mt-3 pl-0">
-      <% @venues.each do |venue| %>
-        <%= link_to venue_path(venue) do %>
-          <div class="card-product col-12" id="venue<%=venue.id%>">
-            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-            <div class="card-product-infos col-9">
-              <h2><%= venue.name %></h2>
+    <% @venues.each do |venue| %>
+      <%= link_to venue_path(venue) do %>
+        <div class="card-product col-12" id="venue<%=venue.id%>">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-product-infos col-9">
+            <h2>
+              <%= venue.name %>
+            </h2>
+            <div>
               <span class="venue">
-                <%= venue.description %>
-              </span>
-              <span>
-                capacity: <%= venue.capacity %>
+                <%= venue.description.truncate(100) %>
               </span>
             </div>
+            <span>
+              capacity: <%= venue.capacity %>
+            </span>
           </div>
+        </div>
         <% end %>
       <% end %>
-    </div>
-  <div class="col-8 mt-3" id="map" style="height: 88vh; width: 100%" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  </div>
+  <div class="col-8 mt-3" id="map" style="height: 88vh; width: 100%" data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>

@@ -8,7 +8,6 @@ const buildMap = (mapElement) => {
     style: 'mapbox://styles/k06kw02/ckszz90e17sx618o7dcya4qv9',
   });
 };
-// center: [52.6358333, -1.1390972]
 // style: 'mapbox://styles/mapbox/streets-v11'
 
 const addMarkersToMap = (map, markers) => {
