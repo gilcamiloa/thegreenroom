@@ -1,14 +1,20 @@
-<div class="tour-info">
+
+<div class="container-fluid row align-items-start">
+<div class="col">
 <h1 class="title"><%= @tour.name %></h1>
 <% @tour.bookings.each do |booking| %>
 <h2 class="venue_info"><%= booking.venue.name %></h2>
 <p class="address"><%= booking.venue.address %></p>
 <p class="date"><%= booking.dates.to_s %></p>
 <% end %>
-<%= link_to "Search for venues", venues_path, class: "venue-show-btn"%>
+<%= link_to "Search Venues", venues_path, class: "venue-show-btn"%>
 </div>
 
-<div id="map"
-     style="height: 100vh;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+<div class="col">
+  <div id="map"
+      style="height: 100vh;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+  </div>
+</div>
