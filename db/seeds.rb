@@ -822,7 +822,7 @@ results = []
 
   results += response['results']
 end
-group_urls = results.map { |result| result['urls']['full'] }.in_groups_of(8, false)
+group_urls = results.map { |result| result['urls']['small'] }.in_groups_of(8, false)
 
 
 Venue.all.each_with_index do |venue, index|
