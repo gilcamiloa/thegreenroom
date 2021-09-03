@@ -16,7 +16,9 @@
             <% if @available_dates.include? day.to_s %>
               <%= link_to Date.parse(day.to_s).strftime("%d"),'',remote: true,:'data-date' => day, data: { controller: 'calendar',calendar_target: "date", action: 'click->calendar#append' } %>
             <% else %>
+              <span class="calendar__date">
                 <%= Date.parse(day.to_s).strftime("%d") %>
+              </span>
             <% end %>
           <% end %>
         <% end %>

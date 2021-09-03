@@ -18,6 +18,36 @@
   height: 100%;
 }
 
+.venue_info__small {
+  height: 40%;
+}
+
+.venue_calendar__submit-container {
+  text-align: center;
+  position: relative;
+}
+
+.calendar__date {
+  opacity: 0.1;
+  background-color: 'red';
+}
+
+.simple-calendar .today {
+    background: none;
+}
+
+.calendar-day a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.venue_calendar__submit-button {
+  background-color: #b5e48c;
+  position: absolute;
+  bottom: -27px;
+  left: 32%;
+}
+
 .venue_calendar_container {
   background-color: #E5E5E5;
   margin-left: -8.5px;
