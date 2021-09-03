@@ -1,5 +1,6 @@
 <div class="venue-info">
-  <div class="venue-img">
+  <div>
+    <%= cl_image_tag venue.photos.first.key, height: 100, width: 100, crop: :fill %>
   </div>
   <div class="venue-text">
     <h5><%= venue.name %></h5>

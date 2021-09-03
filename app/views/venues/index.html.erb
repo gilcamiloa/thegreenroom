@@ -3,7 +3,7 @@
     <% @venues.each do |venue| %>
       <%= link_to venue_path(venue) do %>
         <div class="card-product col-12" id="venue<%=venue.id%>">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <%= cl_image_tag venue.photos.first.key, height: 150, width: 150, crop: :fill %>
           <div class="card-product-infos col-9">
             <h2>
               <%= venue.name %>
