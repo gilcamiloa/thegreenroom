@@ -1,6 +1,8 @@
 <div class="venue-info">
   <div>
+  <% if venue.photos.attached? %>
     <%= cl_image_tag venue.photos.first.key, height: 100, width: 100, crop: :fill %>
+  <% end %>
   </div>
   <div class="venue-text">
     <h5><%= venue.name %></h5>

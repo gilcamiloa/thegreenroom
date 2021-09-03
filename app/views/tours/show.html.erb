@@ -1,20 +1,28 @@
 
-<div class="container-fluid row align-items-start">
-<div class="col">
-<h1 class="title"><%= @tour.name %></h1>
-<% @tour.bookings.each do |booking| %>
-<h2 class="venue_info"><%= booking.venue.name %></h2>
-<p class="address"><%= booking.venue.address %></p>
-<p class="date"><%= booking.dates.to_s %></p>
-<% end %>
 <%= link_to "Search Venues", venues_path, class: "venue-show-btn"%>
-</div>
+<div class='col-12 d-flex flex-row container'>
+  <div class="col-4 venue card-container mt-3 pl-0">
 
-<div class="col">
-  <div id="map"
-      style="height: 100vh;"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-
+  <% @tour.bookings.each do |booking| %>
+    <%= link_to venue_path(booking.venue) do %>
+      <div class="card-product col-12" id="venue<%=booking.venue.id%>">
+        <% if booking.venue.photos.attached? %>
+          <%= cl_image_tag booking.venue.photos.first.key, height: 150, width: 150, crop: :fill %>
+        <%  end %>
+        <div class="card-product-infos col-9">
+          <h2 class="venue_info"><%= booking.venue.name %></h2>
+          <p class="address"><%= booking.venue.description.truncate(100) %></p>
+          <p class="date"><%= booking.venue.capacity %></p>
+        </div>
+      <% end %>
+      </div>
+  <% end %>
   </div>
+
+
+<div class="col-8 mt-3" id="map" style="height: 88vh; width: 100%" id="map"
+        style="height: 100vh;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
 </div>
