@@ -1,11 +1,11 @@
 <div class="d-flex text-center">
   <div id='navbar-homepage'><%= render 'shared/navbar' %></div>
-  <%= link_to new_tour_path(artist: true), class: 'homepage-link' do %>
+  <%= link_to new_user_registration_path(artist: true), class: 'homepage-link' do %>
     <div class = "artist-container d-flex justify-content-center align-items-center bg-bottom-cover">
     <h1>Artist</h1>
   </div>
   <% end %>
-  <%= link_to new_venue_path, class: 'homepage-link' do %>
+  <%= link_to new_user_registration_path, class: 'homepage-link' do %>
   <div class="venue-container d-flex justify-content-center align-items-center bg-bottom-cover">
     <h1>Venue</h1>
   </div>
