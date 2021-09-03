@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <% unless params[:controller] == 'pages' || user_signed_in? == false || current_page?(:controller => 'venues', :action => 'new')%>
+    <% unless params[:controller] == 'pages' || (request.env['PATH_INFO'] == '/users/sign_up') || (request.env['PATH_INFO'] == '/users/sign_in') || (request.env['PATH_INFO'] == '/venues/new')%>
       <%= render 'shared/navbar' %>
     <% end %>
     <%= render 'shared/flashes' %>
