@@ -6,8 +6,11 @@ import "controllers"
 
 export default class extends Controller {
 
-  static targets = ['date'];
+  static targets = ['date', 'date_booked'];
   static values = {foo: Array}
+  connect(){
+    this.date_bookedTarget.parentElement.parentElement.style.backgroundColor = 'green';
+  }
   append() {
     const b = this.dateTarget;
     if (b.parentElement.parentElement.style.backgroundColor) {

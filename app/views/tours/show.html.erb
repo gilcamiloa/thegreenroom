@@ -4,6 +4,17 @@
       <h1 style='color: white'><%= @tour.name %></h1>
       <%= link_to "Search Venues", venues_path, class: "venue-show-btn"%>
     </div>
+      <div class="calendar_container w-100">
+        <%= month_calendar do |day| %>
+          <%= content_tag :div, class: "calendar-day" do %>
+            <% if @dates_booked.include? day.to_s %>
+              <span class="booked_date" data-controller="calendar" data-calendar-target="date_booked"><%= Date.parse(day.to_s).strftime("%d") %></span>
+            <% else %>
+              <span><%= Date.parse(day.to_s).strftime("%d") %></span>
+            <% end %>
+          <% end %>
+        <% end %>
+    </div>
   <% @tour.bookings.each do |booking| %>
     <%= link_to venue_path(booking.venue) do %>
       <div class="card-product col-12" id="venue<%=booking.venue.id%>">
@@ -27,8 +38,6 @@
       <% end %>
     <% end %>
   </div>
-
-
   <div class="col-8 mt-3" id="map" style="height: 90vh; width: 100%" id="map"
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
