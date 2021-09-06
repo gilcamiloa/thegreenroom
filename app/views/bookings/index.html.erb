@@ -1,0 +1,9 @@
+<% @bookings.each do |booking| %>
+  <%= booking.venue_id %>
+  <%= booking.user_id %>
+  <% if booking.tour_id %>
+    <%= booking.tour_id %>
+  <% end %>
+  <%= booking.dates %>
+  <%= booking.status %>
+<% end %>
