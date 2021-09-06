@@ -29,11 +29,21 @@
         input_html: { class: 'devise_form_input'}%>
 
       <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-    </div>
+      <div class="calendar_container w-100 h-100" data-controller="calendar" data-calendar-available_dates="<%= @available_dates %>">
+        <%= month_calendar do |day| %>
+          <%= content_tag :div, class: "calendar-day", data: {date: day} do %>
+              <%= link_to Date.parse(day.to_s).strftime("%d"),'',remote: true,:'data-date' => day, data: { controller: 'calendar',calendar_target: "date", action: 'click->calendar#append' } %>
+          <% end %>
+        <% end %>
+          <%= f.input :available_dates, default: [], multiple: true, as: :hidden, html5: true %>
+      </div>
+
+
 
     <div class="form-action">
       <%= f.button :submit, class: 'devise_form_submit' %>
     </div>
   <% end %>
   </div>
+    </div>
 </div>
