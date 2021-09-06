@@ -11,7 +11,7 @@
           </div>
           <span class="description"><%= @venue.description %></span>
         </div>
-        <div class="venue_calendar_container">
+        <div class="venue_calendar_container mt-5">
           <div class="calendar_container p-3 w-100 h-100" data-controller="calendar" data-calendar-available_dates="<%= @available_dates %>">
             <%= month_calendar do |day| %>
               <%= content_tag :div, class: "calendar-day", data: {date: day} do %>
