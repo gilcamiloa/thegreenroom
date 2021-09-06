@@ -14,4 +14,5 @@ class Venue < ApplicationRecord
     against: [ :address, :city ],
     using: {
       tsearch: { prefix: true }
+    }
 end
