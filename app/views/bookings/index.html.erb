@@ -1,6 +1,5 @@
 <div class="container card-container mt-3">
   <% @bookings.each do |booking| %>
-    <%= link_to booking_path(booking) do %>
       <div class="card-product">
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
         <div class="card-product-infos">
@@ -17,9 +16,16 @@
             end date:
             <%= booking.dates[-1].strftime("%y-%m-%d") %>
           </span>
+          <% if booking.accepted %>
+            <p >accepted</p>
+          <% elsif booking.accepted == false %>
+            <p >declined</p>
+          <% else %>
+            <p>pending</p>
+          <% end %>
+          <%= link_to "Accept", accept_booking_path( booking), method: :patch %>
+          <%= link_to "Reject", reject_booking_path( booking), method: :patch %>
         </div>
       </div>
     <% end %>
-  <% end %>
 </div>
-

@@ -13,6 +13,13 @@
           <h2 class="venue_info"><%= booking.venue.name %></h2>
           <p class="address"><%= booking.venue.description.truncate(100) %></p>
           <p class="date"><%= booking.venue.capacity %></p>
+          <% if booking.accepted %>
+            <p> <%= booking.venue.name %> accepted your booking!</p>
+          <% elsif booking.accepted == false %>
+            <p><%= booking.venue.name %> is a No Go</p>
+          <% else %>
+            <p>Your booking with <%= booking.venue.name %> is pending</p>
+          <% end %>
         </div>
       <% end %>
       </div>
