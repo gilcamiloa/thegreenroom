@@ -3,7 +3,7 @@ class VenuesController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
-    @venues = Venue.all
+    @venues = params[:query].present? ? Venue.near(params[:query]) : Venue.All
     @markers = @venues.geocoded.map do |venue|
       {
         lat: venue.latitude,
