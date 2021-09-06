@@ -487,7 +487,7 @@ venue = Venue.create!(
 venue = Venue.create!(
   {
     user: user3,
-    name: 'Sindecombe Social',
+    name: 'Sindercombe Social',
     capacity: 300,
     description: "Smart bar with plates displayed on exposed brickwork, hanging lamps plus craft beers and pub grub.",
     address: "2 Goldhawk Rd, London W12 8QD",
@@ -823,7 +823,6 @@ results = []
   results += response['results']
 end
 group_urls = results.map { |result| result['urls']['small'] }.in_groups_of(8, false)
-
 
 Venue.all.each_with_index do |venue, index|
   puts "Creating images for #{venue.name}..."
