@@ -28,8 +28,10 @@ class BookingsController < ApplicationController
     end
     @booking.dates = @booking.dates.sort
     @booking.venue = Venue.find(params[:venue_id])
-    @tour = Tour.find(params[:booking][:tour_id])
-    @booking.tour = @tour
+    unless params[:booking][:tour_id].empty?
+      @tour = Tour.find(params[:booking][:tour_id])
+      @booking.tour = @tour
+    end
     @booking.user = current_user
     @booking.status = false
   end
@@ -43,10 +45,14 @@ class BookingsController < ApplicationController
 
   def save_booking
     if @booking.save!
-      # placeholder path untill we have a bookings page
+     if defined?(@tour) 
       redirect_to tour_path(@tour)
+     else
+       # placeholder path untill we have a bookings page
+       redirect_to venue_path(@booking.venue)
+     end
     else
-      redirect_to venue_path(@venue)
+      redirect_to venue_path(@booking.venue)
     end
   end
 end
