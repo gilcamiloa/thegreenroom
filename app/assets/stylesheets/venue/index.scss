@@ -19,7 +19,7 @@
 }
 
 .venue_info__small {
-  height: 40%;
+  height: 38%;
 }
 
 .venue_calendar__submit-container {
@@ -67,4 +67,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 12px;
+}
+
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 13px;
 }

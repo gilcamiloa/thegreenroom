@@ -1,9 +1,25 @@
-<% @bookings.each do |booking| %>
-  <%= booking.venue_id %>
-  <%= booking.user_id %>
-  <% if booking.tour_id %>
-    <%= booking.tour_id %>
+<div class="container card-container mt-3">
+  <% @bookings.each do |booking| %>
+    <%= link_to booking_path(booking) do %>
+      <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-product-infos">
+          <h2><%= booking.venue.name %></h2>
+          <span>
+            <% if booking.user.band_name %>
+             band:
+              <%= booking.user.band_name %>
+            <% end %>
+          </span>
+          <span>
+            start date:
+            <%= booking.dates[0].strftime("%y-%m-%d") %>
+            end date:
+            <%= booking.dates[-1].strftime("%y-%m-%d") %>
+          </span>
+        </div>
+      </div>
+    <% end %>
   <% end %>
-  <%= booking.dates %>
-  <%= booking.status %>
-<% end %>
+</div>
+

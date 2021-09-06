@@ -9,6 +9,10 @@ class BookingsController < ApplicationController
     end
   end
 
+  def show
+    @booking = Booking.find(params[:id])
+  end
+
   def new
     @bookings = Booking.new
   end
