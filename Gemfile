@@ -29,7 +29,7 @@ gem 'redis', '~> 4.0'
 gem 'geocoder'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
-
+gem 'pg_search'
 gem 'devise'
 gem 'cloudinary', '~> 1.16.0'
 gem 'rest-client'
