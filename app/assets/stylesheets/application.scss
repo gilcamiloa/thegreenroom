@@ -14,6 +14,7 @@
 @import "pages/index";
 @import "venues/index";
 @import "tours/show";
+@import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";
 
 * {
   color: white;

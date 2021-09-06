@@ -26,9 +26,11 @@ require("channels")
 import "bootstrap";
 import "controllers"
 import { initMapbox } from '../plugins/init_mapbox';
+import { initAutocomplete } from '../plugins/init_autocomplete';
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
+  initAutocomplete();
   const markers = document.querySelectorAll('.mapboxgl-marker');
   markers.forEach((marker) => {
     marker.addEventListener('click', () => {

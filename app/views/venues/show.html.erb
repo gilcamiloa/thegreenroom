@@ -7,7 +7,7 @@
         <p>Capacity: </p>
         <span class="pl-3"><%= @venue.capacity %></span>
       </div>
-      <p class="flex-grow-1 d-flex"><%= @venue.description %></p>
+      <span class="description"><%= @venue.description %></span>
     </div>
     <div class="row venue_calendar_container h-50">
       <div class="calendar_container w-100 h-100" data-controller="calendar" data-calendar-available_dates="<%= @available_dates %>">
