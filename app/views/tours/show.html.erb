@@ -22,20 +22,19 @@
           <%= cl_image_tag booking.venue.photos.first.key, height: 150, width: 150, crop: :fill, class: 'venue_card__image' %>
         <%  end %>
         <div class="card-product-infos col-9">
-          <h2>
-            <%= booking.venue.name %>
-          </h2>
-            <div>
-              <span class="venue">
-              <%= booking.venue.description.truncate(100) %>
-              </span>
-            </div>
-              <span>
-                Capacity: <%= booking.venue.capacity %>
-              </span>
-          </div>
-      </div>
+          <h2 class="venue_info"><%= booking.venue.name %></h2>
+          <p class="address"><%= booking.venue.description.truncate(100) %></p>
+          <p class="date"><%= booking.venue.capacity %></p>
+          <% if booking.accepted %>
+            <p> <%= booking.venue.name %> accepted your booking!</p>
+          <% elsif booking.accepted == false %>
+            <p><%= booking.venue.name %> is a No Go</p>
+          <% else %>
+            <p>Your booking with <%= booking.venue.name %> is pending</p>
+          <% end %>
+        </div>
       <% end %>
+      </div>
     <% end %>
   </div>
   <div class="col-8 mt-3" id="map" style="height: 90vh; width: 100%" id="map"

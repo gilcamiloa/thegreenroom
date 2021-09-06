@@ -23,6 +23,19 @@ class BookingsController < ApplicationController
     save_booking
   end
 
+  def accept
+    @booking = Booking.find(params[:id])
+    @booking.accepted = true
+    @booking.save
+    redirect_to request.referrer
+  end
+
+  def reject
+    @booking = Booking.find(params[:id])
+    @booking.accepted = false
+    @booking.save
+    redirect_to request.referrer
+  end
   private
 
   def create_booking
@@ -49,7 +62,7 @@ class BookingsController < ApplicationController
 
   def save_booking
     if @booking.save!
-     if defined?(@tour) 
+     if defined?(@tour)
       redirect_to tour_path(@tour)
      else
        # placeholder path untill we have a bookings page
