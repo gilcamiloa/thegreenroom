@@ -25,6 +25,11 @@ class ToursController < ApplicationController
 
   def show
     @venues = Tour.find(params[:id]).venues
+    @dates_booked = []
+    @venues.each do |venue|
+      venue.bookings.where(tour: params[:id]).each { |booking| @dates_booked << booking.dates }
+    end
+    @dates_booked.flatten!.uniq! unless @dates_booked.empty?
     @markers = @venues.geocoded.map do |venue|
       {
         lat: venue.latitude,

@@ -7,6 +7,12 @@ Rails.application.routes.draw do
     resources :bookings, only: [ :new, :create, :index]
     resources :reviews, only: [:new]
   end
+    resources :bookings, only: [] do
+      member do
+        patch :accept
+        patch :reject
+      end
+    end
 
   resources :users, only: [:index] do
     resources :chatrooms, only: [:index]
