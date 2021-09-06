@@ -8,7 +8,7 @@
     <%= link_to venue_path(booking.venue) do %>
       <div class="card-product col-12" id="venue<%=booking.venue.id%>">
         <% if booking.venue.photos.attached? %>
-          <%= cl_image_tag booking.venue.photos.first.key, height: 150, width: 150, crop: :fill, class: 'venue_card__image' %>
+          <%= cl_image_tag booking.venue.photos.first.key, height: 150, width: 150, crop: :fill, class: 'venue_card_image' %>
         <%  end %>
         <div class="card-product-infos col-9">
           <h2>

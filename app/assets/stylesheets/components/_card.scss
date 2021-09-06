@@ -58,6 +58,14 @@
   color: inherit;
 }
 
-.venue_card__image {
+.venue_card_image {
   margin-left: -15px;
+}
+
+.venue span {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
 }

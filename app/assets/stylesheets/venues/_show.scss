@@ -61,16 +61,19 @@
   height: 41px;
 }
 
-.venue span {
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 12px;
-}
-
 .description {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 13px;
+}
+
+.background-image-venues-show {
+  background: url(asset_path("tours/tours-show-bw"));
+  // background: url(asset_path("tours/tob-heaven"));
+  // background: url(asset_path("tours/bass-confetti"));
+  // background: url(asset_path("tours/bass"));
+  // background: url(asset_path("tours/drums-confetti"));
+  // background: url(asset_path("tours/confetti"));
+  background-size: cover;
+  height: 100vh;
 }
