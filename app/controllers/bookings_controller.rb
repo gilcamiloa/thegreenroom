@@ -5,11 +5,9 @@ class BookingsController < ApplicationController
     elsif params[:venue_id]
       @bookings = Venue.find(params[:venue_id]).bookings
     elsif params[:user_id]
-      @bookings = User.find(params[:user]).bookings
-      puts "User find bookings"
+      @bookings = User.find(params[:user_id]).bookings
     else
       @bookings = Booking.all
-      puts "bookings all"
     end
   end
 
