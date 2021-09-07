@@ -19,6 +19,8 @@
                         autofocus: true%>
             <%= f.hidden_field :is_band, value: true %>
             <%= f.input :photo, as: :file %>
+          <% else %>
+            <%= f.hidden_field :is_band, value: false %>
           <% end %>
 
 
