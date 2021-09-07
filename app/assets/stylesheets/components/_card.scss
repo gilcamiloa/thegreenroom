@@ -2,7 +2,7 @@
   overflow: hidden;
   height: 120px;
   color: white;
-  background-color: #303030;
+  background-color: $gray;
   opacity: .85;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -11,7 +11,7 @@
   transition: .3s;
   border-radius: 4px;
   &:hover {
-    background-color: #707070;
+    background-color: $hgray;
   }
 }
 
@@ -58,6 +58,14 @@
   color: inherit;
 }
 
-.venue_card__image {
+.venue_card_image {
   margin-left: -15px;
+}
+
+.venue span {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
 }

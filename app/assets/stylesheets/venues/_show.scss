@@ -4,7 +4,8 @@
 }
 
 .venue_gallery {
-  background-color: #E5E5E5;
+  background-color: $gray;
+  opacity: .85;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   height: 100%;
@@ -18,13 +19,19 @@
   height: 100%;
 }
 
-.venue_info__small {
-  height: 38%;
-}
-
 .venue_calendar__submit-container {
   text-align: center;
   position: relative;
+}
+
+.venue_calendar__submit-button {
+  background-color: $green;
+  color: white;
+  transition: .3s;
+  &:hover {
+    color: white;
+    background-color: $hgreen;
+  }
 }
 
 .calendar__date {
@@ -41,16 +48,8 @@
   color: inherit;
 }
 
-.venue_calendar__submit-button {
-  background-color: #b5e48c;
-  position: absolute;
-  bottom: -27px;
-  left: 32%;
-}
-
 .venue_calendar_container {
   background-color: #E5E5E5;
-  margin-left: -8.5px;
 }
 
 .calendar-heading {
@@ -61,16 +60,19 @@
   height: 41px;
 }
 
-.venue span {
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 12px;
-}
-
 .description {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 13px;
+}
+
+.background-image-venues-show {
+  background: url(asset_path("tours/tours-show-bw"));
+  // background: url(asset_path("tours/tob-heaven"));
+  // background: url(asset_path("tours/bass-confetti"));
+  // background: url(asset_path("tours/bass"));
+  // background: url(asset_path("tours/drums-confetti"));
+  // background: url(asset_path("tours/confetti"));
+  background-size: cover;
+  height: 100vh;
 }
