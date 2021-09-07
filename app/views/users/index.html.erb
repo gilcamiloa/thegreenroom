@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="banner" style="background-image: url(<%= cl_image_path current_user.photo.key %>)">
+    <h2><%= current_user.band_name %> </h2>
+    <h6><em>Band Description</em></h6>
+    <h6> <%= current_user.band_description %> </h6>
+  </div>
+</div>
+<div class="container content">
+  <div class="row row-cont">
+    <div class="card col-4 ">
+    <h4>Current Tours</h4>
+    <% current_user.tours.each do |tour| %>
+      <div class="card tour-card">
+        <ul><strong><%= tour.name %></strong></ul>
+        <ul><%= "Start Date: #{tour.start_date.day}/#{tour.start_date.month}"%></ul>
+        <ul><%= "End Date: #{tour.end_date.day}/#{tour.end_date.month}"%></ul>
+      </div>
+    <% end %>
+  </div>
+  <div class="card col-8 ">
+    <h4>Reviews</h4>
+      <%# <div class="card rev-card">
+        <%# <h6>Reviews</h6>
+        <li><% user.reviews.each do |review| %>
+            <%# <%= review.rating%>
+            <%# <%= review.content%>
+          <%# <%= end %>
+        <%# </li> %>
+      <%# </div> %>
+  </div>
+</div>
