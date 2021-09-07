@@ -1,0 +1,16 @@
+.btn {
+  color: white !important;
+  background-color: transparent;
+  border-radius: 2em;
+  border: 0.2em solid $green;
+  cursor: pointer;
+  font-size: 3vmin;
+  padding: 0.7em 1.5em;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  background: $green;
+  color: white !important;
+}

@@ -1,7 +1,7 @@
-.venue_container {
-  background-color: #fff;
-  height: 85vh;
-}
+// .venue_container {
+//   background-color: #fff;
+//   height: 85vh;
+// }
 
 .venue_gallery {
   background-color: $gray;
@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   height: 100%;
-  width:100%;
+  width: 100%;
   padding: 15px;
   align-items: center;
   justify-items: center;
@@ -34,26 +34,48 @@
   }
 }
 
-.calendar__date {
-  opacity: 0.1;
-  background-color: 'red';
-}
+// .calendar__date a {
+//   // opacity: 0.1;
+//   background-color: 'yellow';
+// }
 
 .simple-calendar .today {
-    background: none;
+    background: $green;
 }
 
-.calendar-day a{
+.simple-calendar .wday-0,.wday-1,.wday-2,.wday-3,.wday-4,.wday-5,.wday-6 {
+    background: $gray;
+}
+
+.simple-calendar tr {
+  color: white;
+}
+
+.calendar-day {
+  color: white;
+}
+.calendar-day a {
   text-decoration: none;
-  color: inherit;
+  color: $green;
+  &:hover {
+    background: $hgray
+  }
 }
 
 .venue_calendar_container {
-  background-color: #E5E5E5;
+  background-color: $gray;
+  opacity: .85;
 }
 
 .calendar-heading {
   text-align: center;
+  color: white;
+}
+
+.calendar-heading a {
+  text-align: center;
+  color: $green;
+  text-decoration: none;
 }
 
 .simple-calendar .day {

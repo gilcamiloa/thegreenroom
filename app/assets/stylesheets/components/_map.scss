@@ -49,21 +49,9 @@
 // }
 
 .mapboxgl-marker {
-  position: absolute;
-  border-radius: 50%;
-  border: 7px solid #fff;
-  width: 6px;
-  height: 6px;
-  top: -17 !important;
-}
-
-.mapboxgl-marker::after {
-  position: absolute;
-  content: '';
-  width: 0px;
-  height: 0px;
-  bottom: -24px;
-  left: -7px;
-  border: 7px solid transparent;
-  border-top: 15px solid #fff;
+  background-image: asset-url('logo/logo.png');
+  width: 20px;
+  height: 40px;
+  background-size: cover;
+  background-position: center;
 }
