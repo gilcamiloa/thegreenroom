@@ -1,4 +1,4 @@
-<% if !current_user.is_band %>
+
 
 <div class="container card-container mt-3">
   <% @bookings.each do |booking| %>
@@ -25,15 +25,15 @@
           <% else %>
             <p>pending</p>
           <% end %>
+          <% if booking.venue.user == current_user %>
           <%= link_to "Accept", accept_booking_path( booking), method: :patch %>
           <%= link_to "Reject", reject_booking_path( booking), method: :patch %>
+          <% end %>
         </div>
       </div>
     <% end %>
   </div>
-  <% else  %>
-  <div class="container p-100">
-    <h1>You shall not pass!</h1>
-  </div>
-
-<% end %>
+  <%# <% else  %>
+  <%# <div class="container p-100"> %>
+    <%# <h1>You shall not pass!</h1> %>
+  <%# </div> %>

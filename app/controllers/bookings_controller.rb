@@ -2,8 +2,14 @@ class BookingsController < ApplicationController
   def index
     if params[:tour_id]
       @bookings = Tour.find(params[:tour_id]).bookings
+    elsif params[:venue_id]
+      @bookings = Venue.find(params[:venue_id]).bookings
+    elsif params[:user_id]
+      @bookings = User.find(params[:user]).bookings
+      puts "User find bookings"
     else
-      @bookings = Booking.where(venue: current_user.venues)
+      @bookings = Booking.all
+      puts "bookings all"
     end
   end
 
