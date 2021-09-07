@@ -1,0 +1,34 @@
+
+<div class='background-image vh-100'>
+  <div class="container d-flex align-items-center flex-column py-5 form-container">
+    <h2>Sign up</h2>
+  <%= simple_form_for(@user, url: user_path, method: :patch) do |f| %>
+    <%= f.error_notification %>
+    <div class="form-inputs">
+      <%= f.input :email,
+                  required: true,
+                  placeholder: 'email',
+                  autofocus: true,
+                  input_html: { autocomplete: "email" }%>
+      <%= f.input :band_description,
+                  required: true,
+                  placeholder: 'band description',
+                  autofocus: true%>
+      <%= f.input :photo, as: :file %>
+      <%= f.input :password,
+                  required: true,
+                  placeholder: 'password',
+                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                  input_html: { autocomplete: "new-password" } %>
+      <%= f.input :password_confirmation,
+                  required: true,
+                  placeholder: 'password confirmation',
+                  input_html: { autocomplete: "new-password" } %>
+    </div>
+
+    <div class="form-actions d-flex justify-content-center">
+      <%= f.button :submit, "Change" %>
+    </div>
+  <% end %>
+  </div>
+</div>
