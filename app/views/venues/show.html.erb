@@ -1,6 +1,6 @@
 <div class="container-fluid text-white d-flex flex-direction-row venue_container pt-5 background-image-venues-show">
   <div class="row w-100 m-0">
-    <div class="col-5">
+    <div class="col-4">
       <div class="d-flex flex-column m-0">
         <div class="venue_info venue_info__small d-flex flex-column">
           <h1 class="text-center"><%= @venue.name %></h1>
@@ -11,7 +11,7 @@
           </div>
           <span class="description"><%= @venue.description %></span>
         </div>
-        <div class="venue_calendar_container mt-5">
+        <div class="venue_calendar_container">
           <div class="calendar_container p-3 w-100 h-100" data-controller="calendar" data-calendar-available_dates="<%= @available_dates %>">
             <%= month_calendar do |day| %>
               <%= content_tag :div, class: "calendar-day", data: {date: day} do %>
@@ -35,7 +35,7 @@
         </div>
       </div>
     </div>
-    <div class="col-7">
+    <div class="col-8">
       <div class="ml-2 venue_gallery">
         <% @venue.photos.each do |photo| %>
           <%= cl_image_tag photo.key, height: 150, width: 150, crop: :fill %>
