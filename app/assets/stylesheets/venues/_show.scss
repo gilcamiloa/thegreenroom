@@ -34,17 +34,8 @@
   }
 }
 
-// .calendar__date a {
-//   // opacity: 0.1;
-//   background-color: 'yellow';
-// }
-
 .simple-calendar .today {
     background: $green;
-}
-
-.simple-calendar .wday-0,.wday-1,.wday-2,.wday-3,.wday-4,.wday-5,.wday-6 {
-    background: $gray;
 }
 
 .simple-calendar tr {
@@ -52,13 +43,14 @@
 }
 
 .calendar-day {
-  color: white;
+  color: $hgray !important;
 }
+
 .calendar-day a {
   text-decoration: none;
   color: $green;
   &:hover {
-    background: $hgray
+    color: white;
   }
 }
 
@@ -70,6 +62,8 @@
 .calendar-heading {
   text-align: center;
   color: white;
+  display: flex;
+  justify-content: space-between;
 }
 
 .calendar-heading a {
@@ -97,4 +91,16 @@
   // background: url(asset_path("tours/confetti"));
   background-size: cover;
   height: 100vh;
+}
+
+.prev-month {
+  background-color: yellow;
+}
+
+.current-month {
+  background-color: grey !important;
+}
+
+.booked_date {
+  color: $green;
 }

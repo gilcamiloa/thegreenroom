@@ -25,9 +25,9 @@
 }
 
 .nav-link {
-  color: white !important;
+  color: $lgray !important;
   transition: .3s;
   &:hover {
-    color: $green !important;
+    color: $white !important;
   }
 }
