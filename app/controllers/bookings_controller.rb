@@ -2,12 +2,11 @@ class BookingsController < ApplicationController
   def index
     if params[:tour_id]
       @bookings = Tour.find(params[:tour_id]).bookings
-    elsif params[:venue_id]
-      @bookings = Venue.find(params[:venue_id]).bookings
     else
-      @bookings = Booking.all
+      @bookings = Booking.where(venue: current_user.venues)
     end
   end
+
 
   def show
     @booking = Booking.find(params[:id])
@@ -66,7 +65,8 @@ class BookingsController < ApplicationController
       redirect_to tour_path(@tour)
      else
        # placeholder path untill we have a bookings page
-       redirect_to venue_path(@booking.venue)
+      #  redirect_to venue_path(@booking.venue)
+       redirect_to bookings_path
      end
     else
       redirect_to venue_path(@booking.venue)

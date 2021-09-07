@@ -1,4 +1,4 @@
-<% if booking.user.is_band == false %>
+<% if !current_user.is_band %>
 
 <div class="container card-container mt-3">
   <% @bookings.each do |booking| %>
@@ -30,7 +30,10 @@
         </div>
       </div>
     <% end %>
-</div>
-<% else  %>
-<h1>You shall not pass!</h1>
+  </div>
+  <% else  %>
+  <div class="container p-100">
+    <h1>You shall not pass!</h1>
+  </div>
+
 <% end %>

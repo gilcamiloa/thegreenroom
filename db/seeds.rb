@@ -592,162 +592,162 @@ venue = Venue.create!(
 # venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
 # venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
-venue = Venue.create!(
-  {
-    user: user4,
-    name: 'The Sunflower Lounge',
-    capacity: 120,
-    description: "The Sunflower Lounge brings the glamour and grunge of New York dive bars to the centre of Birmingham. We have showcased the best of underground, breaking and local talent, with intimate performances from the likes of Peace, The Amazons, Foals, Wolf Alice, Royal Blood, Dua Lipa, Rat Boy, Superfood and many more...",
-    address: "76 Smallbrook Queensway, Birmingham B5 4EG",
-    latitude: 52.4762841977671,
-    longitude: -1.8975974461478475,
-    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
-  }
-)
+# venue = Venue.create!(
+#   {
+#     user: user4,
+#     name: 'The Sunflower Lounge',
+#     capacity: 120,
+#     description: "The Sunflower Lounge brings the glamour and grunge of New York dive bars to the centre of Birmingham. We have showcased the best of underground, breaking and local talent, with intimate performances from the likes of Peace, The Amazons, Foals, Wolf Alice, Royal Blood, Dua Lipa, Rat Boy, Superfood and many more...",
+#     address: "76 Smallbrook Queensway, Birmingham B5 4EG",
+#     latitude: 52.4762841977671,
+#     longitude: -1.8975974461478475,
+#     available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
+#   }
+# )
 
-# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# # file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# # file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# # venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# # venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
-venue = Venue.create!(
-  {
-    user: user4,
-    name: 'The Cookie',
-    capacity: 180,
-    description: "Coffee bar by day, turns into an arty bar scene by night with live music and comedy in cellar.",
-    address: "68 High St, Leicester LE1 5YP",
-    latitude: 52.63560429208377,
-    longitude: -1.136956230802454,
-    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
-  }
-)
+# venue = Venue.create!(
+#   {
+#     user: user4,
+#     name: 'The Cookie',
+#     capacity: 180,
+#     description: "Coffee bar by day, turns into an arty bar scene by night with live music and comedy in cellar.",
+#     address: "68 High St, Leicester LE1 5YP",
+#     latitude: 52.63560429208377,
+#     longitude: -1.136956230802454,
+#     available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
+#   }
+# )
 
-# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# # file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# # file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# # venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# # venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
-venue = Venue.create!(
-  {
-    user: user4,
-    name: 'The Louisiana',
-    capacity: 130,
-    description: "Live bands nightly in a cosy room above a sprawling wood-floored pub and former seafarers' hotel.",
-    address: "Wapping Rd, Bathurst Terrace, Bristol BS1 6UA",
-    latitude: 51.44684002605702,
-    longitude: -2.59642018851261,
-    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
-  }
-)
+# venue = Venue.create!(
+#   {
+#     user: user4,
+#     name: 'The Louisiana',
+#     capacity: 130,
+#     description: "Live bands nightly in a cosy room above a sprawling wood-floored pub and former seafarers' hotel.",
+#     address: "Wapping Rd, Bathurst Terrace, Bristol BS1 6UA",
+#     latitude: 51.44684002605702,
+#     longitude: -2.59642018851261,
+#     available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
+#   }
+# )
 
-# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# # file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# # file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# # venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# # venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
-venue = Venue.create!(
-  {
-    user: user4,
-    name: 'The Hope & Ruin',
-    capacity: 140,
-    description: "Lively, laid-back pub with reclaimed vibe, for craft beers and live bands in upstairs music space.",
-    address: "11-12 Queens Rd, Brighton BN1 3WA",
-    latitude: 50.824853862268064,
-    longitude: -0.14304914251348885,
-    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
-  }
-)
+# venue = Venue.create!(
+#   {
+#     user: user4,
+#     name: 'The Hope & Ruin',
+#     capacity: 140,
+#     description: "Lively, laid-back pub with reclaimed vibe, for craft beers and live bands in upstairs music space.",
+#     address: "11-12 Queens Rd, Brighton BN1 3WA",
+#     latitude: 50.824853862268064,
+#     longitude: -0.14304914251348885,
+#     available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
+#   }
+# )
 
-# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# # file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# # file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# # venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# # venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
-venue = Venue.create!(
-  {
-    user: user4,
-    name: "O2 Shepherd's Bush Empire",
-    capacity: 2000,
-    description: "Landmark live music venue in Edwardian theatre, hosting eclectic programme of rock, pop and comedy.",
-    address: "Shepherd's Bush Green, London W12 8TT",
-    latitude: 51.50367021627186,
-    longitude: -0.22410578471350484,
-    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
-  }
-)
+# venue = Venue.create!(
+#   {
+#     user: user4,
+#     name: "O2 Shepherd's Bush Empire",
+#     capacity: 2000,
+#     description: "Landmark live music venue in Edwardian theatre, hosting eclectic programme of rock, pop and comedy.",
+#     address: "Shepherd's Bush Green, London W12 8TT",
+#     latitude: 51.50367021627186,
+#     longitude: -0.22410578471350484,
+#     available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
+#   }
+# )
 
-# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# # file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# # file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# # venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# # venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
-venue = Venue.create!(
-  {
-    user: user4,
-    name: 'Buyers Club',
-    capacity: 250,
-    description: "Hip locale & event space with a verdant terrace offering craft ales, cocktails, wine & small plates.",
-    address: "24 Hardman St, Liverpool L1 9AX",
-    latitude: 53.40156738754962,
-    longitude: -2.97128394427121,
-    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
-  }
-)
+# venue = Venue.create!(
+#   {
+#     user: user4,
+#     name: 'Buyers Club',
+#     capacity: 250,
+#     description: "Hip locale & event space with a verdant terrace offering craft ales, cocktails, wine & small plates.",
+#     address: "24 Hardman St, Liverpool L1 9AX",
+#     latitude: 53.40156738754962,
+#     longitude: -2.97128394427121,
+#     available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
+#   }
+# )
 
-# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# # file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# # file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# # venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# # venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
-venue = Venue.create!(
-  {
-    user: user4,
-    name: "King Tut's Wah Wah Hut",
-    capacity: 300,
-    description: "Mighty concert room for up-and-coming local bands and cult international acts serving own lager.",
-    address: "272A St Vincent St, Glasgow G2 5RL",
-    latitude: 55.86274337556175,
-    longitude: -4.264929900009697,
-    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
-  }
-)
+# venue = Venue.create!(
+#   {
+#     user: user4,
+#     name: "King Tut's Wah Wah Hut",
+#     capacity: 300,
+#     description: "Mighty concert room for up-and-coming local bands and cult international acts serving own lager.",
+#     address: "272A St Vincent St, Glasgow G2 5RL",
+#     latitude: 55.86274337556175,
+#     longitude: -4.264929900009697,
+#     available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
+#   }
+# )
 
-# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# # file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# # file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# # venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# # venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
-venue = Venue.create!(
-  {
-    user: user4,
-    name: 'The Cluny 2',
-    capacity: 270,
-    description: "Iconic Newcastle music venue, bar, & kitchen. Independent since 2017.",
-    address: "36 Lime St, Newcastle upon Tyne NE1 2PQ",
-    latitude: 54.97526166989169,
-    longitude: -1.5918610902361037,
-    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
-  }
-)
+# venue = Venue.create!(
+#   {
+#     user: user4,
+#     name: 'The Cluny 2',
+#     capacity: 270,
+#     description: "Iconic Newcastle music venue, bar, & kitchen. Independent since 2017.",
+#     address: "36 Lime St, Newcastle upon Tyne NE1 2PQ",
+#     latitude: 54.97526166989169,
+#     longitude: -1.5918610902361037,
+#     available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
+#   }
+# )
 
-# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
-# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
-# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
-# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+# # file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# # file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# # venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# # venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
-venue = Venue.create!(
-  {
-    user: user4,
-    name: 'YES',
-    capacity: 270,
-    description: "Four floors of YES. A quirky, cool venue with all the mod-cons required of a live music venue.",
-    address: "38 Charles St, Manchester M1 7DB",
-    latitude: 53.4740577581536,
-    longitude: -2.2381731864789307,
-    available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
-  }
-)
+# venue = Venue.create!(
+#   {
+#     user: user4,
+#     name: 'YES',
+#     capacity: 270,
+#     description: "Four floors of YES. A quirky, cool venue with all the mod-cons required of a live music venue.",
+#     address: "38 Charles St, Manchester M1 7DB",
+#     latitude: 53.4740577581536,
+#     longitude: -2.2381731864789307,
+#     available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
+#   }
+# )
 
 # file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
 # file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')

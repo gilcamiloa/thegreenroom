@@ -49,7 +49,7 @@ class VenuesController < ApplicationController
 
   def save_venue
     if @venue.save!
-      redirect_to venue_path(@venue)
+      redirect_to bookings_path
     else
       render :new
     end

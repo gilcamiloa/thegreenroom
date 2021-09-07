@@ -1,3 +1,4 @@
+<% if current_user.is_band == true%>
 <div class="container card-container mt-3">
   <% @tours.each do |tour| %>
     <%= link_to tour_path(tour) do %>
@@ -18,3 +19,8 @@
     <% end %>
   <% end %>
 </div>
+<% else %>
+  <div class="p-55">
+    <p>You shall not pass!</p>
+  </div>
+<% end %>
