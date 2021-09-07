@@ -5,15 +5,21 @@
     <h6> <%= @user.band_description %> </h6>
   </div>
 </div>
+<% if @user == current_user %>
+  <%= link_to 'Edit', edit_user_path(@user)  %>
+<% end %>
 <div class="container d-flex flex-row justify-content-between">
-  <div class="row col-6">
-    <iframe width="100%" height="315" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1200924622&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></iframe>
-    <%= link_to 'Edit', edit_user_path(@user)  %>
+  <% if @user.soundcloud_playlist %>
+      <div class="row col-6">
+        <iframe width="100%" height="315" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/<%= @user.soundcloud_playlist %>&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></iframe>
+      </div>
     </div>
-  </div>
+  <% end %>
+  <% if @user.youtube_playlist %>
     <div class="row col-6">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/videoseries?list=PL9A1600EA18716662" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/videoseries?list=<%= @user.youtube_playlist %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+  <% end %>
 </div>
 <div class="container content">
   <div class="row row-cont">
@@ -29,3 +35,4 @@
     </div>
   </div>
 </div>
+
