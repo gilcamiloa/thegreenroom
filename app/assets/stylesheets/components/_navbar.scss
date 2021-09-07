@@ -23,3 +23,11 @@
   background-color: $gray;
   z-index: 5;
 }
+
+.nav-link {
+  color: white !important;
+  transition: .3s;
+  &:hover {
+    color: $green !important;
+  }
+}

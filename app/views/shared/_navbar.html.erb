@@ -7,6 +7,9 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
+        <form action="/venues">
+          <input type="search" id="venue_address" class="form-control" name= "query" placeholder="Where do you want to play?" />
+        </form>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -15,9 +18,6 @@
 
         <%# this input goes to venues_path %>
         <%# It searches the map on the venues path %>
-        <form action="/venues">
-          <input type="search" id="venue_address" class="form-control" name= "query" placeholder="Where do you want to play?" />
-        </form>
 
         <li class="nav-item">
           <%= link_to "Tours", tours_path, class: "nav-link" %>
