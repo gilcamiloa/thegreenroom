@@ -1,11 +1,18 @@
 .card-product {
   overflow: hidden;
   height: 120px;
-  background: white;
+  color: white;
+  background-color: #303030;
+  opacity: .85;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   margin: 15px 0;
+  transition: .3s;
+  border-radius: 4px;
+  &:hover {
+    background-color: #707070;
+  }
 }
 
 .card-product img {
@@ -28,11 +35,29 @@
   margin-top: 8px;
 }
 
+.card-product:first-child {
+  margin-top: 0px;
+}
+
 .card-product .card-product-infos {
   padding: 16px;
 }
 
-.tour-card-container {
+.card-container {
   overflow: auto;
   height: 90vh;
+}
+
+.venue.card-container {
+  height: 88vh;
+}
+
+.card-container a{
+  text-decoration-style: none;
+  text-decoration-line: none;
+  color: inherit;
+}
+
+.venue_card__image {
+  margin-left: -15px;
 }

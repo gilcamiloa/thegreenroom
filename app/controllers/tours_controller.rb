@@ -17,8 +17,7 @@ class ToursController < ApplicationController
     @tour = Tour.new(tour_params)
     @tour.user = current_user
     if @tour.save
-      raise
-      redirect_to tour_path(@tour)
+      redirect_to venues_path
     else
       render :new
     end
@@ -26,10 +25,16 @@ class ToursController < ApplicationController
 
   def show
     @venues = Tour.find(params[:id]).venues
+    @dates_booked = []
+    @venues.each do |venue|
+      venue.bookings.where(tour: params[:id]).each { |booking| @dates_booked << booking.dates }
+    end
+    @dates_booked.flatten!.uniq! unless @dates_booked.empty?
     @markers = @venues.geocoded.map do |venue|
       {
         lat: venue.latitude,
         lng: venue.longitude,
+        id: venue.id,
         info_window: render_to_string(partial: "venues/info_window", locals: { venue: venue })
       }
     end

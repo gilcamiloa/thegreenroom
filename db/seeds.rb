@@ -1,11 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
+# # This file should contain all the record creation needed to seed the database with its default values.
+# # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+# #
+# # Examples:
+# #
+# #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+# #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
+require 'rest-client'
 User.destroy_all
 Venue.destroy_all
 Tour.destroy_all
@@ -51,7 +52,7 @@ user4 = User.create!(
 
 puts "...each with 10 venues..."
 
-Venue.create!(
+venue = Venue.create!(
   {
     user: user1,
     name: 'KOKO',
@@ -64,7 +65,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user1,
     name: 'The Bullingdon',
@@ -77,7 +83,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user1,
     name: 'Scala',
@@ -90,7 +101,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user1,
     name: 'The Victoria Dalston',
@@ -103,7 +119,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user1,
     name: 'Oslo, Hackney',
@@ -116,7 +137,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user1,
     name: 'Brudenell Social Club',
@@ -129,7 +155,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user1,
     name: 'The Purple Turtle',
@@ -142,7 +173,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user1,
     name: 'North Laine Brewhouse',
@@ -155,7 +191,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user1,
     name: 'Patterns, Brighton',
@@ -168,7 +209,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user1,
     name: 'O2 Institute 3, Birmingham',
@@ -181,7 +227,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user2,
     name: 'Exchange',
@@ -194,7 +245,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user2,
     name: 'Clwb Ifor Bach',
@@ -207,7 +263,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user2,
     name: 'The Joiners',
@@ -220,7 +281,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user2,
     name: 'The Adrian Flux Waterfront',
@@ -233,7 +299,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user2,
     name: 'Rock City',
@@ -246,7 +317,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user2,
     name: 'Exeter Phoenix',
@@ -259,7 +335,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user2,
     name: 'Engine Rooms',
@@ -272,7 +353,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user2,
     name: 'O2 Academy 2, Newcastle',
@@ -285,7 +371,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user2,
     name: 'Queen Margaret Union',
@@ -298,7 +389,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user2,
     name: 'Plug',
@@ -311,7 +407,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user3,
     name: 'The Welly',
@@ -324,7 +425,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user3,
     name: 'Stylus',
@@ -337,7 +443,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user3,
     name: 'O2 Forum Kentish Town',
@@ -350,7 +461,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user3,
     name: 'Heaven',
@@ -363,7 +479,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user3,
     name: 'Sindecombe Social',
@@ -376,20 +497,30 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user3,
-    name: 'The Lexington',
-    capacity: 150,
-    description: "High-ceilinged bar with sofas, serving US draught beers and whiskies, plus live music room upstairs.",
-    address: "96-98 Pentonville Rd, London N1 9JB",
-    latitude: 51.53189339740316,
-    longitude: -0.11138421511791342,
+    name: 'OMEARA',
+    capacity: 320,
+    description: "A new home for live music, creative events and clubnights in London Bridge's refreshed railway arches.",
+    address: "6 O'Meara St, London SE1 1TE",
+    latitude: 51.50435367015925,
+    longitude: -0.09448616728061174,
     available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user3,
     name: 'The Deaf Institute',
@@ -402,7 +533,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user3,
     name: 'Think Tank?',
@@ -415,7 +551,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user3,
     name: 'La Belle Angele',
@@ -428,7 +569,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user3,
     name: 'The Bodega',
@@ -441,7 +587,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user4,
     name: 'The Sunflower Lounge',
@@ -454,7 +605,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user4,
     name: 'The Cookie',
@@ -467,7 +623,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user4,
     name: 'The Louisiana',
@@ -480,7 +641,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user4,
     name: 'The Hope & Ruin',
@@ -493,20 +659,30 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user4,
-    name: "Whelan's",
-    capacity: 300,
-    description: "Venue for live music and clubs or relaxing in The Parlour, decorated in 1950s sitting room-style.",
-    address: "25 Wexford St, Portobello, Dublin 2, D02 H527, Ireland",
-    latitude: 53.33672732528841,
-    longitude: -6.2657042731084225,
+    name: "O2 Shepherd's Bush Empire",
+    capacity: 2000,
+    description: "Landmark live music venue in Edwardian theatre, hosting eclectic programme of rock, pop and comedy.",
+    address: "Shepherd's Bush Green, London W12 8TT",
+    latitude: 51.50367021627186,
+    longitude: -0.22410578471350484,
     available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user4,
     name: 'Buyers Club',
@@ -519,7 +695,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user4,
     name: "King Tut's Wah Wah Hut",
@@ -532,7 +713,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user4,
     name: 'The Cluny 2',
@@ -545,7 +731,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user4,
     name: 'YES',
@@ -558,7 +749,12 @@ Venue.create!(
   }
 )
 
-Venue.create!(
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
+
+venue = Venue.create!(
   {
     user: user4,
     name: 'Thekla',
@@ -570,6 +766,11 @@ Venue.create!(
     available_dates: [Faker::Date.forward(days: 3), Faker::Date.forward(days: 6), Faker::Date.forward(days: 12)]
   }
 )
+
+# file1 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island4.jpg')
+# file2 = URI.open('http://www.koko.uk.com/sites/koko.uk.com/files/images/listings/island5.jpg')
+# venue.photos.attach(io: file1, filename: 'island4.jpg', content_type: 'image/jpg')
+# venue.photos.attach(io: file2, filename: 'island5.jpg', content_type: 'image/jpg')
 
 10.times do
   Tour.create!(
@@ -612,4 +813,25 @@ User.create!(
     }
   )
 end
+
+results = []
+16.times do |i|
+  response = RestClient.get "https://api.unsplash.com/search/photos?page=#{i + 1}&query=live-music-venues&client_id=#{ENV['UNSPLASH_API_KEY']}&per_page=20"
+
+  response = JSON.parse(response)
+
+  results += response['results']
+end
+group_urls = results.map { |result| result['urls']['small'] }.in_groups_of(8, false)
+
+
+Venue.all.each_with_index do |venue, index|
+  puts "Creating images for #{venue.name}..."
+  group_urls[index].each_with_index do |url, url_index|
+    puts "image #{url_index + 1}"
+    file = URI.open(url)
+    venue.photos.attach(io: file, filename: "#{venue.name}-#{url_index}.jpg", content_type: 'image/jpg')
+  end
+end
+
 puts "Seed complete 🤘"
