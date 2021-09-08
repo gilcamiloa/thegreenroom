@@ -42,10 +42,17 @@ document.addEventListener('turbolinks:load', () => {
       next.innerText = '>'
     }
   }
+  let currentCard;
   markers.forEach((marker) => {
     marker.addEventListener('click', () => {
       const id = marker.dataset.id
-      const card = document.getElementById(`venue${id}`)
+      if (currentCard) {
+        currentCard.setAttribute('class', 'card-product col-12');
+      }
+      const card = document.getElementById(`venue${id}`);;
+      currentCard = card;
+      card.setAttribute('class', 'card-product col-12 card__selected');
+      currentCard = card;
       setTimeout(() => {
         card.scrollIntoView({ behavior: 'smooth', block: 'center' })
       })
