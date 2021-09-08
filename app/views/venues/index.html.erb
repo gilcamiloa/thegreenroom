@@ -1,5 +1,5 @@
 <div class='col-12 d-flex flex-row container'>
-  <div class="col-4 venue card-container mt-5 pl-0">
+  <div class="col-4 venue card-container pt-3 mt-5 pl-0">
     <% @venues.each do |venue| %>
       <%= link_to venue_path(venue) do %>
         <div class="card-product col-12" id="venue<%=venue.id%>">
@@ -16,7 +16,8 @@
               </span>
             </div>
             <span>
-              Capacity: <%= venue.capacity %>
+              <i class="fas fa-users"></i>
+              <%= venue.capacity %>
             </span>
           </div>
         </div>
