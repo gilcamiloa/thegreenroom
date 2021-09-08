@@ -1,7 +1,7 @@
 <div class='col-12 d-flex flex-row container background-image-tours pt-5'>
   <div class="col-4">
     <div class="d-flex justify-content-between ">
-      <h2 style='color: white'><%= @tour.name %></h2>
+      <h2 style='color: white'><%= @tour.name.truncate(40) %></h2>
       <%= link_to "Search Venues", venues_path, class: "btn btn-small"%>
     </div>
     <div class="col-12 venue card-container mt-3 pl-0 card-container-small">
