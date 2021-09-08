@@ -11,7 +11,7 @@ const buildMap = (mapElement) => {
 };
 // style: 'mapbox://styles/mapbox/streets-v11'
 
-const addMarkersToMap = (map, markers) => {
+const addMarkersToMap = (map, markers, mapElement) => {
   markers.forEach((marker) => {
     const popup = new mapboxgl.Popup().setHTML(marker.info_window);
     const el = document.createElement('div')
@@ -35,7 +35,7 @@ const initMapbox = () => {
   if (mapElement) {
     const map = buildMap(mapElement);
     const markers = JSON.parse(mapElement.dataset.markers);
-    addMarkersToMap(map, markers);
+    addMarkersToMap(map, markers, mapElement);
   }
 };
 

@@ -1,12 +1,14 @@
-<div class="venue-info">
-  <div>
-  <% if venue.photos.attached? %>
-    <%= cl_image_tag venue.photos.first.key, height: 100, width: 100, crop: :fill %>
-  <% end %>
+<%= link_to venue_path(venue) do %>
+
+  <div class="card-trip venue-info">
+    <% if venue.photos.attached? %>
+      <%= cl_image_tag venue.photos.first.key, crop: :fill %>
+    <% end %>
+    <div class="card-trip-infos venue-text">
+      <div>
+        <h2><%= venue.name %></h2>
+        <p>Capacity: <%= venue.capacity %></p>
+      </div>
+    </div>
   </div>
-  <div class="venue-text">
-    <h5><%= venue.name %></h5>
-    <p>Capacity: <%= venue.capacity %></p> <p><%= venue.address %></p>
-  </div>
-</div>
-<div class="button-container"><%= link_to "About #{venue.name}", venue_path(venue), class: "venue-show-btn"%></div>
+<% end %>

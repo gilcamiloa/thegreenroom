@@ -1,0 +1,12 @@
+#venue_address {
+  background: black;
+  color: white;
+  width: 400px;
+  &:hover {
+    border: 1px solid $green;
+  }
+}
+
+.ap-input-icon svg {
+  display: none;
+}

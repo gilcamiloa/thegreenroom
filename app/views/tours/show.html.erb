@@ -2,7 +2,7 @@
   <div class="col-4 venue card-container mt-3 pl-0">
     <div class="d-flex justify-content-between">
       <h1 style='color: white'><%= @tour.name %></h1>
-      <%= link_to "Search Venues", venues_path, class: "venue-show-btn"%>
+      <%= link_to "Search Venues", venues_path, class: "btn"%>
     </div>
       <div class="calendar_container w-100">
         <%= month_calendar do |day| %>
@@ -44,7 +44,8 @@
   </div>
   <div class="col-8 mt-3" id="map" style="height: 90vh; width: 100%" id="map"
         data-markers="<%= @markers.to_json %>"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+        data-marker-img="<%= asset_path('logo/whitelogo.png') %>">
   </div>
 
 </div>

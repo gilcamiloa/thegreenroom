@@ -7,6 +7,9 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
+        <form action="/venues">
+          <input type="search" id="venue_address" class="form-control" name= "query" placeholder="Where do you want to play?" />
+        </form>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -15,21 +18,15 @@
 
         <%# this input goes to venues_path %>
         <%# It searches the map on the venues path %>
-        <form action="/venues">
-          <input type="search" id="venue_address" class="form-control" name= "query" placeholder="Where do you want to play?" />
-        </form>
 
-
-        <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
-        </li>
         <li class="nav-item">
-          <%= link_to "Tour", "#", class: "nav-link" %>
+          <%= link_to "Tours", tours_path, class: "nav-link" %>
         </li>
 
         <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/frameswolfe", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to "Profile", users_path(current_user), class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
