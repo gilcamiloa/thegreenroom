@@ -5,11 +5,20 @@
 }
 
 .mapboxgl-marker {
-  background-image: asset-url('logo/logo.png');
+  background-image: asset-url('logo/markerlogo.png');
   width: 20px;
   height: 40px;
   background-size: cover;
   background-position: center;
+}
+
+.mapboxgl-popup-content:focus-visible,
+.card-trip-infos:focus-visible,
+.venue-text:focus-visible,
+.mapboxgl-popup:focus-visible,
+.mapboxgl-popup-anchor-bottom:focus-visible,
+.mapboxgl-popup-content a:focus-visible {
+  outline: none !important;
 }
 
 // .button-container {

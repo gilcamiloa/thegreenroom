@@ -41,7 +41,4 @@ document.addEventListener('turbolinks:load', () => {
       })
     });
   });
-  // const svg = document.querySelector('.ap-input-pin');
-  // console.log(svg);
-  // svg.remove();
 })
