@@ -34,9 +34,13 @@ document.addEventListener('turbolinks:load', () => {
   const markers = document.querySelectorAll('.mapboxgl-marker');
   if (document.querySelectorAll('.calendar-heading')) {
     const prev = document.querySelectorAll('.calendar-heading a')[0]
-    prev.innerText = '<'
+    if (prev) {
+      prev.innerText = '<'
+    }
     const next = document.querySelectorAll('.calendar-heading a')[1]
-    next.innerText = '>'
+    if (next) {
+      next.innerText = '>'
+    }
   }
   markers.forEach((marker) => {
     marker.addEventListener('click', () => {
