@@ -20,7 +20,11 @@
         <%# It searches the map on the venues path %>
 
         <li class="nav-item">
-          <%= link_to "Tours", tours_path, class: "nav-link" %>
+          <% if current_user.is_band %>
+            <%= link_to "Tours", tours_path(user_id: current_user), class: "nav-link" %>
+          <% else %>
+            <%= link_to "Bookings", bookings_path(user_id: current_user), class: "nav-link" %>
+          <% end %>
         </li>
 
         <li class="nav-item dropdown">

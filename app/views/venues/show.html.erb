@@ -44,7 +44,6 @@
         <% @venue.photos.each do |photo| %>
           <%= cl_image_tag photo.key, height: 150, width: 150, crop: :fill %>
         <% end %>
-        <%= link_to "Venue Bookings Menu", bookings_path(user_id: current_user)%>
         <img src="https://via.placeholder.com/150C/Ohttps://placeholder.com/" alt="">
       </div>
     </div>
