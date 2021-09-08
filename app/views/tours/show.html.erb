@@ -2,7 +2,9 @@
   <div class="col-4 venue card-container mt-3 pl-0">
     <div class="d-flex justify-content-between">
       <h1 style='color: white'><%= @tour.name %></h1>
-      <%= link_to "Search Venues", venues_path, class: "btn"%>
+      <div>
+        <%= link_to "Search Venues", venues_path, class: "btn"%>
+      </div>
     </div>
       <div class="calendar_container w-100">
         <%= month_calendar do |day| %>
