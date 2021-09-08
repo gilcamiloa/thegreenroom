@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_06_151832) do
+ActiveRecord::Schema.define(version: 2021_09_07_142426) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -103,6 +103,8 @@ ActiveRecord::Schema.define(version: 2021_09_06_151832) do
     t.boolean "is_band"
     t.string "band_name"
     t.text "band_description"
+    t.string "youtube_playlist"
+    t.string "soundcloud_playlist"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
