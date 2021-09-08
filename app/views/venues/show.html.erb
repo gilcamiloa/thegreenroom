@@ -6,10 +6,14 @@
           <h1 class="text-center"><%= @venue.name %></h1>
           <h3>About Venue:</h3>
           <div class="capacity_container d-flex flex-direction-row">
-            <p>Capacity: </p>
-            <span class="pl-3"><%= @venue.capacity %></span>
+            <div>
+              <i class="fas fa-users"></i>
+            </div>
+            <span class="pl-3 pb-2">
+              <%= @venue.capacity %>
+            </span>
           </div>
-          <span class="description"><%= @venue.description %></span>
+          <span class="description pb-2"><%= @venue.description %></span>
         </div>
         <div class="venue_calendar_container">
           <div class="calendar_container p-3 w-100 h-100" data-controller="calendar" data-calendar-available_dates="<%= @available_dates %>">
@@ -28,7 +32,7 @@
               <%= f.input :dates, default: [], multiple: true, as: :hidden, html5: true %>
               <%= f.input :tour_id, label: 'Select Tour*', collection: Tour.where(user: current_user) %>
               <div class="venue_calendar__submit-container">
-                <%= f.button :submit, class: 'venue_calendar__submit-button' %>
+                <%= f.button :submit, class: 'btn' %>
               </div>
             <% end %>
           </div>

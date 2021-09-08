@@ -35,12 +35,12 @@
               <%= link_to Date.parse(day.to_s).strftime("%d"),'',remote: true,:'data-date' => day, data: { controller: 'calendar',calendar_target: "date", action: 'click->calendar#append' } %>
           <% end %>
         <% end %>
-          <%= f.input :available_dates, default: [], multiple: true, as: :hidden, html5: true %>
+          <%= f.input :available_dates, default: [], multiple: true, as: :hidden, html5: true, class: 'booked_date' %>
       </div>
 
 
 
-    <div class="form-action">
+    <div class="form-action d-flex justify-content-center">
       <%= f.button :submit, class: 'devise_form_submit' %>
     </div>
   <% end %>
