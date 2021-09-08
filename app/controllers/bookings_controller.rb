@@ -5,7 +5,15 @@ class BookingsController < ApplicationController
     elsif params[:venue_id]
       @bookings = Venue.find(params[:venue_id]).bookings
     elsif params[:user_id]
-      @bookings = User.find(params[:user_id]).bookings
+      @user = User.find(params[:user_id])
+      @bookings = []
+      if @user.is_band
+        @user.bookings.each { |booking| @bookings << booking }
+      else
+        unless @user.venues.empty?
+          @user.venues.each { |venue| venue.bookings.each { |booking| @bookings << booking } }
+        end
+      end
     else
       @bookings = Booking.all
     end
@@ -70,7 +78,7 @@ class BookingsController < ApplicationController
      else
        # placeholder path untill we have a bookings page
       #  redirect_to venue_path(@booking.venue)
-       redirect_to bookings_path
+       redirect_to bookings_path(user_id: current_user)
      end
     else
       redirect_to venue_path(@booking.venue)

@@ -2,38 +2,66 @@
 
 <div class="container card-container mt-3">
   <% @bookings.each do |booking| %>
-      <div class="card-product">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-        <div class="card-product-infos">
-          <h2><%= booking.venue.name %></h2>
-          <span>
-            <% if booking.user.band_name %>
-             band:
-              <%= booking.user.band_name %>
+    <% if current_user.is_band %>
+      <%= link_to booking.tour.nil? ? venue_path(booking.venue.id) : tour_path(booking.tour.id) do %>
+        <div class="card-product">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-product-infos">
+            <h2><%= booking.venue.name %></h2>
+            <span>
+              <% if booking.user.band_name %>
+               band:
+                <%= booking.user.band_name %>
+              <% end %>
+            </span>
+            <span>
+              start date:
+              <%= booking.dates[0].strftime("%y-%m-%d") %>
+              end date:
+              <%= booking.dates[-1].strftime("%y-%m-%d") %>
+            </span>
+            <% if booking.accepted %>
+              <p >accepted</p>
+            <% elsif booking.accepted == false %>
+              <p >declined</p>
+            <% else %>
+              <p>pending</p>
             <% end %>
-          </span>
-          <span>
-            start date:
-            <%= booking.dates[0].strftime("%y-%m-%d") %>
-            end date:
-            <%= booking.dates[-1].strftime("%y-%m-%d") %>
-          </span>
-          <% if booking.accepted %>
-            <p >accepted</p>
-          <% elsif booking.accepted == false %>
-            <p >declined</p>
-          <% else %>
-            <p>pending</p>
-          <% end %>
-          <% if booking.venue.user == current_user %>
-          <%= link_to "Accept", accept_booking_path( booking), method: :patch %>
-          <%= link_to "Reject", reject_booking_path( booking), method: :patch %>
-          <% end %>
+          </div>
         </div>
-      </div>
+      <% end %>
+    <% else %>
+      <%= link_to user_path(booking.user.id) do %>
+        <div class="card-product">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-product-infos">
+            <h2><%= booking.venue.name %></h2>
+            <span>
+              <% if booking.user.band_name %>
+               band:
+                <%= booking.user.band_name %>
+              <% end %>
+            </span>
+            <span>
+              start date:
+              <%= booking.dates[0].strftime("%y-%m-%d") %>
+              end date:
+              <%= booking.dates[-1].strftime("%y-%m-%d") %>
+            </span>
+            <% if booking.accepted %>
+              <p >accepted</p>
+            <% elsif booking.accepted == false %>
+              <p >declined</p>
+            <% else %>
+              <p>pending</p>
+            <% end %>
+            <% if booking.venue.user == current_user %>
+              <%= link_to "Accept", accept_booking_path( booking), method: :patch %>
+              <%= link_to "Reject", reject_booking_path( booking), method: :patch %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
     <% end %>
-  </div>
-  <%# <% else  %>
-  <%# <div class="container p-100"> %>
-    <%# <h1>You shall not pass!</h1> %>
-  <%# </div> %>
+  <% end %>
+</div>
