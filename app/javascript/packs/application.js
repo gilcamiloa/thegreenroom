@@ -32,6 +32,12 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initAutocomplete();
   const markers = document.querySelectorAll('.mapboxgl-marker');
+  if (document.querySelectorAll('.calendar-heading')) {
+    const prev = document.querySelectorAll('.calendar-heading a')[0]
+    prev.innerText = '<'
+    const next = document.querySelectorAll('.calendar-heading a')[1]
+    next.innerText = '>'
+  }
   markers.forEach((marker) => {
     marker.addEventListener('click', () => {
       const id = marker.dataset.id
