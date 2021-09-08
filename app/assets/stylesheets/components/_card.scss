@@ -12,7 +12,7 @@
   border-radius: 4px;
   &:hover {
     background-color: $hgray;
-    border-right: 3px solid $green;
+    // border-right: 3px solid $green;
   }
 }
 
@@ -69,4 +69,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 12px;
+}
+
+.card__selected {
+  background-color: $hgray;
+  border-right: 3px solid $green;
 }
