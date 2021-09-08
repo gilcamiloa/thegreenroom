@@ -5,27 +5,26 @@
     <h6> <%= current_user.band_description %> </h6>
   </div>
 </div>
+<div class="container d-flex flex-row justify-content-between">
+  <div class="row col-6">
+    <iframe width="100%" height="315" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1200924622&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></iframe>
+    </div>
+  </div>
+    <div class="row col-6">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/videoseries?list=PL9A1600EA18716662" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
 <div class="container content">
   <div class="row row-cont">
     <div class="card col-4 ">
-    <h4>Current Tours</h4>
-    <% current_user.tours.each do |tour| %>
-      <div class="card tour-card">
-        <ul><strong><%= tour.name %></strong></ul>
-        <ul><%= "Start Date: #{tour.start_date.day}/#{tour.start_date.month}"%></ul>
-        <ul><%= "End Date: #{tour.end_date.day}/#{tour.end_date.month}"%></ul>
-      </div>
-    <% end %>
-  </div>
-  <div class="card col-8 ">
-    <h4>Reviews</h4>
-      <%# <div class="card rev-card">
-        <%# <h6>Reviews</h6>
-        <li><% user.reviews.each do |review| %>
-            <%# <%= review.rating%>
-            <%# <%= review.content%>
-          <%# <%= end %>
-        <%# </li> %>
-      <%# </div> %>
+      <h4>Current Tours</h4>
+      <% current_user.tours.each do |tour| %>
+        <div class="card tour-card">
+          <ul><strong><%= tour.name %></strong></ul>
+          <ul><%= "Start Date: #{tour.start_date.day}/#{tour.start_date.month}"%></ul>
+          <ul><%= "End Date: #{tour.end_date.day}/#{tour.end_date.month}"%></ul>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
