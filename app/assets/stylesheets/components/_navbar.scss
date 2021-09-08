@@ -16,12 +16,18 @@
 }
 
 .navbar-custom {
-    // opacity: .5;
-    position: fixed;
-    width: 100vw;
-    height: 50px;
-    color: white;
-    background-color: $gray;
-    z-index: 5;
-    // background-color: none;
+  position: fixed;
+  width: 100vw;
+  height: 50px;
+  color: white;
+  background-color: $gray;
+  z-index: 5;
+}
+
+.nav-link {
+  color: $lgray !important;
+  transition: .3s;
+  &:hover {
+    color: $white !important;
+  }
 }

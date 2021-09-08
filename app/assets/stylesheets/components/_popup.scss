@@ -1,0 +1,76 @@
+.mapboxgl-popup-content {
+  max-width: 350px;
+  background: $gray !important;
+  padding: 4px !important;
+  // transition: 0.1s;
+  // &:hover {
+  //   background: $hgray !important;
+  // }
+}
+
+.mapboxgl-popup-tip {
+  border-top-color: $gray !important;
+}
+
+
+.card-trip {
+  overflow: hidden;
+  background: $gray;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: .1s;
+  text-decoration: none !important;
+  &:hover {
+    background: $hgray;
+    text-decoration: none !important;
+  }
+  a {
+    text-decoration: none !important;
+  }
+}
+
+  .card-trip > img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card-trip h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .card-trip p {
+    font-size: 12px;
+    opacity: .7;
+    margin: 0;
+  }
+
+  .card-trip .card-trip-infos {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  // .venue-img {
+  //   height: 100px;
+  //   width: 100px;
+  //   background-color: grey;
+  //   flex-shrink: 0;
+  //   margin: 5px;
+  // }
+
+  // .venue-info {
+  //   display: flex;
+  //   justify-content: center;
+  //   margin-bottom:5px;
+  // }
+
+  // .venue-text {
+  //   background-color: $gray;
+  //   text-align: center;
+  //   font-size: 10px;
+  //   line-height: 1;
+  // }

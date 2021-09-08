@@ -8,10 +8,11 @@
   display: flex;
   align-items: center;
   margin: 15px 0;
-  transition: .3s;
+  transition: .1s;
   border-radius: 4px;
   &:hover {
     background-color: $hgray;
+    // border-right: 3px solid $green;
   }
 }
 
@@ -68,4 +69,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 12px;
+}
+
+.card__selected {
+  background-color: $hgray;
+  border-right: 3px solid $green;
 }

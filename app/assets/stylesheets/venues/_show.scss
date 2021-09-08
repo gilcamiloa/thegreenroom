@@ -1,7 +1,7 @@
-.venue_container {
-  background-color: #fff;
-  height: 85vh;
-}
+// .venue_container {
+//   background-color: #fff;
+//   height: 85vh;
+// }
 
 .venue_gallery {
   background-color: $gray;
@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   height: 100%;
-  width:100%;
+  width: 100%;
   padding: 15px;
   align-items: center;
   justify-items: center;
@@ -34,26 +34,42 @@
   }
 }
 
-.calendar__date {
-  opacity: 0.1;
-  background-color: 'red';
-}
-
 .simple-calendar .today {
-    background: none;
+    border: 2px solid $green;
 }
 
-.calendar-day a{
+.simple-calendar tr {
+  color: white;
+}
+
+.calendar-day {
+  color: $hgray !important;
+}
+
+.calendar-day a {
   text-decoration: none;
-  color: inherit;
+  color: $green;
+  &:hover {
+    color: white;
+  }
 }
 
 .venue_calendar_container {
-  background-color: #E5E5E5;
+  background-color: $gray;
+  opacity: .85;
 }
 
 .calendar-heading {
   text-align: center;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.calendar-heading a {
+  text-align: center;
+  color: $green;
+  text-decoration: none;
 }
 
 .simple-calendar .day {
@@ -75,4 +91,20 @@
   // background: url(asset_path("tours/confetti"));
   background-size: cover;
   height: 100vh;
+}
+
+.prev-month {
+  background-color: yellow;
+}
+
+.current-month {
+  background-color: grey !important;
+}
+
+.booked_date {
+  color: $green !important;
+}
+
+.date__selected a {
+  color: white;
 }

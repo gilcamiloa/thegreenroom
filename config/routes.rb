@@ -14,7 +14,7 @@ Rails.application.routes.draw do
       end
     end
 
-  resources :users, only: [:index] do
+  resources :users, only: [:index, :edit, :update, :show] do
     resources :chatrooms, only: [:index]
   end
 

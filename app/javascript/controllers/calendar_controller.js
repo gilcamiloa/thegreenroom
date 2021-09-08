@@ -15,8 +15,11 @@ export default class extends Controller {
     const b = this.dateTarget;
     if (b.parentElement.parentElement.style.backgroundColor) {
       b.parentElement.parentElement.style.backgroundColor = ''
+      b.parentElement.parentElement.setAttribute('class', 'current-month')
+      b.parentelement.setAttribute('class', 'calendar-day')
     } else {
-      b.parentElement.parentElement.style.backgroundColor = '#b5e48c'
+      b.parentElement.parentElement.setAttribute('class', 'date__selected')
+      b.parentElement.parentElement.style.backgroundColor = '#2fdb6e'
     }
     let dateInput = document.querySelector('#booking_dates');
     if (dateInput == null) {

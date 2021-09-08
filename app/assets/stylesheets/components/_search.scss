@@ -1,0 +1,21 @@
+#venue_address {
+  background: $hgray;
+  border: 1px solid $hgray;
+  color: white;
+  width: 400px;
+  &:hover {
+    // border: 1px solid white;
+    border-color: $green;
+    box-shadow: 0 0 0 0.2rem rgba(47, 219, 110, 0.25);
+  }
+}
+
+.ap-input-icon svg {
+  display: none;
+}
+
+#venue_address:focus {
+  border-color: $green;
+  // box-shadow: none;
+  box-shadow: 0 0 0 0.2rem rgba(47, 219, 110, 0.25);
+}
