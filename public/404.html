@@ -4,64 +4,88 @@
   <title>The page you were looking for doesn't exist (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-  .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
+    /* body {
+        background-image: url("public/images/emptystage.jpg");
+      } */
+    img {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      left: 0px;
+    }
 
-  .rails-default-error-page div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
+    .error-page {
+      color: #ffffff;
+      text-align: center;
+      font-family: sans-serif;
+    }
 
-  .rails-default-error-page div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+    .dialog {
+      background-color: rgba(48, 48, 48);
+      opacity: 80%;
+      width: 80%;
+      height: 100%;
+      margin: 0 10%;
+      position: absolute;
+      top: 0px;
+      /* right: center; */
 
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
+    }
 
-  .rails-default-error-page div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-  </style>
-</head>
+    .button {
+      margin: 1%;
+    }
 
-<body class="rails-default-error-page">
+    .text {
+      padding: 10%;
+      margin: 1%;
+    }
+
+    h1 {
+      line-height: 1.5em;
+      font-size: 5vmin;
+    }
+
+    h2 {
+      line-height: 1.5em;
+      font-size: 2vmin;
+    }
+
+
+    .btn {
+      color: white !important;
+      background-color: transparent;
+      border-radius: 2em;
+      border: 0.2em solid #2fdb6e;
+      cursor: pointer;
+      font-size: 3vmin;
+      padding: 0.7em 1.5em;
+      text-transform: uppercase;
+      transition: all 0.25s ease;
+    }
+
+    .btn:hover {
+      background: #2fdb6e;
+      color: white !important;
+    }
+  </style></head>
+
+<body class="error-page">
+<img src="images/emptystage.png" alt="empty stage">
   <!-- This file lives in public/404.html -->
   <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
+
+    <div class="text">
+      <h1>404 Not Found</h1>
+      <h1>This stage isn't set</h1>
+      <h2>You've gone to a dead page or mistyped something... or something.</h2>
+      <h2>Just Hit the back button or...</h2>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+    <div class="button">
+      <a href="http://www.enterthegreenroom.co.uk/" class="btn">
+        Back to start!
+      </a>
+    </div>
   </div>
 </body>
 </html>
