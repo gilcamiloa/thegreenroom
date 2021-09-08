@@ -1,30 +1,21 @@
-<div class="container">
-  <div class="banner" style="background-image: url(<%= cl_image_path @user.photo.key, height: 500, width: 1150, crop: :fill %>)">
-    <h2><%= @user.band_name %> </h2>
-    <h6><em>Band Description</em></h6>
-    <h6> <%= @user.band_description %> </h6>
+
+  <div class="banner pt-5 pl-5 mb-3 d-flex align-items-end justify-content-between" style="background-size: cover; background-position: center; background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,1) 110%), url(<%= cl_image_path @user.photo.key, height: 1000, width: 1000, crop: :fill %>)">
+    <div>
+      <h1><%= @user.band_name %> </h1>
+    </div>
+    <div class="py-2 px-3">
+      <% if @user == current_user %>
+        <%= link_to edit_user_path(@user) do %>
+          <i class="fas fa-cog"></i>
+        <% end %>
+      <% end %>
+    </div>
   </div>
-</div>
-<% if @user == current_user %>
-  <%= link_to 'Edit', edit_user_path(@user)  %>
-<% end %>
+
 <div class="container d-flex flex-row justify-content-between">
-  <% if @user.soundcloud_playlist %>
-      <div class="row col-6">
-        <iframe width="100%" height="315" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/<%= @user.soundcloud_playlist %>&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></iframe>
-      </div>
-    </div>
-  <% end %>
-  <% if @user.youtube_playlist %>
-    <div class="row col-6">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/videoseries?list=<%= @user.youtube_playlist %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  <% end %>
-</div>
-<div class="container content">
-  <div class="row row-cont">
-    <div class="card col-4 ">
-      <h4>Current Tours</h4>
+  <div class="about col-6">
+    <p><%= @user.band_description %></p>
+    <h4>Current Tours</h4>
       <% @user.tours.each do |tour| %>
         <div class="card tour-card">
           <ul><strong><%= tour.name %></strong></ul>
@@ -32,6 +23,38 @@
           <ul><%= "End Date: #{tour.end_date.day}/#{tour.end_date.month}"%></ul>
         </div>
       <% end %>
-    </div>
   </div>
+  <div class="col-6">
+    <% if @user.youtube_playlist %>
+      <div>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/videoseries?list=<%= @user.youtube_playlist %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <% else %>
+      <div class="d-flex align-items-center justify-content-center placeholder-icon-container">
+        <div>
+        <%= link_to edit_user_path(@user) do %>
+          <i class="fab fa-youtube"></i>
+        <% end %>
+        </div>
+      </div>
+      <% end %>
+
+  <div>
+    <% if @user.soundcloud_playlist %>
+        <div>
+          <iframe width="100%" height="315" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/<%= @user.soundcloud_playlist %>&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+          <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></iframe>
+          </div>
+        </div>
+        <% else %>
+        <div class="d-flex align-items-center justify-content-center placeholder-icon-container">
+          <div>
+          <%= link_to edit_user_path(@user) do %>
+            <i class="fab fa-soundcloud"></i>
+          <% end %>
+          </div>
+        </div>
+        <% end %>
+    </div>
+    </div>
 </div>

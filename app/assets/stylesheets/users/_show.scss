@@ -1,16 +1,26 @@
 .banner {
-  width: contain;
   height: 500px;
   background-size: auto;
   background-position: 20% 80%;
-  border-radius: 20px;
+  border-radius: 10px;
   object-fit: cover;
-  h2 {padding: 2px, 3px, 2px;
-      bottom: 25px;
-      color:white;}
-  h6 {padding: 2px, 3px, 2px;
-      color:white;
-      bottom: 25px;}
+  // background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,1) 90%) !important;
+  h1 {
+    font-size: 100px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    -webkit-text-stroke: 1px $gray;
+  }
+  h2 {
+    padding: 2px, 3px, 2px;
+    bottom: 25px;
+    color:white;
+  }
+  h6 {
+    padding: 2px, 3px, 2px;
+    color:white;
+    bottom: 25px;
+  }
 }
 
 .content {
@@ -30,4 +40,41 @@
 .tour-card {
   border-radius: 20px;
   margin: 20px, 20px;
+}
+
+.about {
+  width: auto;
+  height: 630px;
+  border: 2px solid $hgray;
+  border-radius: 5px;
+}
+
+.fa-cog {
+  color: $lgray;
+  &:hover {
+  color: $green;
+  }
+}
+
+.placeholder-icon-container {
+  width: auto;
+  height: 315px;
+  border: 2px solid $hgray;
+  border-radius: 5px;
+}
+
+.fa-soundcloud {
+  font-size: 50px;
+  transition: .2s;
+  &:hover {
+    color: #FF5501;
+  }
+}
+
+.fa-youtube {
+  font-size: 50px;
+  transition: .2s;
+  &:hover {
+    color: #FF0000;
+  }
 }
