@@ -27,9 +27,9 @@
               </div>
             </div>
               <% if booking.accepted %>
-                <p> <%= booking.venue.name %> accepted your booking!</p>
+                <p><%= booking.venue.name %> accepted your booking!</p>
               <% elsif booking.accepted == false %>
-                <p><%= booking.venue.name %> is a No Go</p>
+                <p><%= booking.venue.name %> has declined your booking</p>
               <% else %>
                 <p>Your booking with <%= booking.venue.name %> is pending</p>
               <% end %>
