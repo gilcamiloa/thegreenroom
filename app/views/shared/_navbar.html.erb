@@ -21,15 +21,13 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <% if current_user.is_band == true %>
-        <li class="nav-item">
-          <% if current_user.is_band %>
-            <%= link_to "Tours", tours_path(user_id: current_user), class: "nav-link" %>
-          <% else %>
-            <%= link_to "Bookings", bookings_path(user_id: current_user), class: "nav-link" %>
-          <% end %>
+        <li>
           <%= link_to "Tour +", new_tour_path, class: "nav-link" %>
         </li>
         <% else %>
+        <li class="nav-item">
+          <%= link_to "Bookings", bookings_path(user_id: current_user), class: "nav-link" %>
+        </li>
         <li class="nav-item">
           <%= link_to "Venue +", new_venue_path, class: "nav-link" %>
         </li>

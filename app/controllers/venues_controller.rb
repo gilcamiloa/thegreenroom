@@ -49,10 +49,9 @@ class VenuesController < ApplicationController
 
   def save_venue
     if @venue.save!
-      redirect_to bookings_path
+      redirect_to venue_path(@venue)
     else
       render :new
     end
   end
-
 end

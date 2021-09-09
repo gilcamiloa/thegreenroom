@@ -74,7 +74,7 @@ class BookingsController < ApplicationController
   def save_booking
     if @booking.save!
      if defined?(@tour)
-      redirect_to tour_path(@tour)
+      redirect_to venues_path
      else
        # placeholder path untill we have a bookings page
       #  redirect_to venue_path(@booking.venue)
