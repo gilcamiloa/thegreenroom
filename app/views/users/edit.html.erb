@@ -6,7 +6,8 @@
     <%= f.error_notification %>
     <div class="form-inputs">
       <%= f.input :email,
-                  label: 'Email',
+                  label: false,
+                  placeholder: 'example@email.com',
                   autofocus: true,
                   input_html: { autocomplete: "email" }%>
       <%= f.input :band_description,
@@ -14,21 +15,25 @@
                   autofocus: true%>
       <% if @user.youtube_playlist != nil %>
         <%= f.input :youtube_playlist,
-                    label: 'Youtube Playlist',
+                    label: false,
+                    placeholder: 'youtube playlist url',
                     autofocus: true%>
       <% end %>
       <% if @user.soundcloud_playlist != nil %>
         <%= f.input :soundcloud_playlist,
-                    label: 'Soundcloud Playlist',
+                    label: false,
+                    placeholder: 'soundcloud playlist embed url',
                     autofocus: true%>
       <% end %>
       <%= f.input :photo, label: 'Profile Picture', as: :file %>
       <%= f.input :password,
-                  label: 'Password',
+                  label: false,
+                  placeholder: 'password',
                   hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                   input_html: { autocomplete: "new-password" } %>
       <%= f.input :password_confirmation,
-                  label: 'Password Confirmation',
+                  label: false,
+                  placeholder: 'password confirmation',
                   input_html: { autocomplete: "new-password" } %>
     </div>
 
