@@ -1,4 +1,4 @@
-#venue_search_address {
+.venue_search_address {
   background: $hgray;
   border: 1px solid $hgray;
   color: white;
@@ -15,7 +15,7 @@
   display: none;
 }
 
-#venue_search_address:focus {
+.venue_search_address:focus {
   border-color: $green;
   // box-shadow: none;
   box-shadow: 0 0 0 0.2rem rgba(47, 219, 110, 0.25);
