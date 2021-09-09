@@ -4,9 +4,10 @@
     <div class="form-inputs">
       <%= f.input :soundcloud_playlist,
                   label: false,
+                  placeholder: 'soundcloud playlist url',
                   autofocus: true%>
       <div class="form-actions d-flex justify-content-center">
-        <%= f.button :submit, "Add" %>
+        <%= f.button :submit, "Add", class: 'btn-small' %>
       </div>
     </div>
   <% end %>

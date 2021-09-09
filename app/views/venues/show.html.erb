@@ -34,14 +34,14 @@
               <%= f.input :dates, default: [], multiple: true, as: :hidden, html5: true %>
               <%= f.input :tour_id, label: 'Select Tour', collection: Tour.where(user: current_user), include_blank: false, selected: Tour.first %>
               <div class="venue_calendar__submit-container">
-                <%= f.button :submit, "Request Booking", class: 'btn' %>
+                <%= link_to 'Back', :back, class: 'btn-back' %>
+                <%= f.button :submit, "Request Booking", class: 'btn ml-5' %>
               </div>
             <% end %>
           </div>
         </div>
       </div>
       <div class="my-3">
-      <%= link_to 'Back', :back, class: 'btn-back' %>
       </div>
 
     </div>

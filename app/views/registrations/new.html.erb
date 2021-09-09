@@ -8,14 +8,20 @@
           <%= f.input :email,
                       required: true,
                       autofocus: true,
+                      label: false,
+                      placeholder: 'example@email.com',
                       input_html: { autocomplete: "email" }%>
 
           <% if params[:artist] %>
             <%= f.input :band_name,
                         required: true,
+                        label: false,
+                        placeholder: 'band name',
                         autofocus: true%>
             <%= f.input :band_description,
                         required: true,
+                        placeholder: 'band description...',
+                        label: false,
                         autofocus: true%>
             <%= f.hidden_field :is_band, value: true %>
             <%= f.input :photo, as: :file %>
@@ -26,15 +32,19 @@
 
           <%= f.input :password,
                       required: true,
+                      label: false,
+                      placeholder: 'password',
                       hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                       input_html: { autocomplete: "new-password" } %>
           <%= f.input :password_confirmation,
                       required: true,
+                      label: false,
+                      placeholder: 'password confirmation',
                       input_html: { autocomplete: "new-password" } %>
         </div>
 
         <div class="form-actions d-flex justify-content-center mb-3">
-          <%= f.button :submit, "Sign up" %>
+          <%= f.button :submit, "Sign up", class: 'btn_sign-up' %>
         </div>
         <div class="form-actions d-flex container justify-content-center">
           <%= render "devise/shared/links" %>
