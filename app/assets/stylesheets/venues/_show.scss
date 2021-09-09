@@ -7,12 +7,17 @@
   background-color: $gray;
   opacity: .85;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   height: 100%;
   width: 100%;
   padding: 15px;
   align-items: center;
   justify-items: center;
+}
+
+.venue_gallery img {
+  height: 300px;
+  width: 400px;
 }
 
 .venue_info {

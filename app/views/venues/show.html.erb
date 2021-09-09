@@ -41,10 +41,9 @@
     </div>
     <div class="col-8">
       <div class="ml-2 venue_gallery">
-        <% @venue.photos.each do |photo| %>
-          <%= cl_image_tag photo.key, height: 150, width: 150, crop: :fill %>
+        <% @venue.photos.first(4).each do |photo| %>
+          <%= cl_image_tag photo.key, crop: :fill %>
         <% end %>
-        <img src="https://via.placeholder.com/150C/Ohttps://placeholder.com/" alt="">
       </div>
     </div>
   </div>
