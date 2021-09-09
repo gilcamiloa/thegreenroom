@@ -1,13 +1,13 @@
 <div class='col-12 d-flex flex-row container background-image-tours pt-5'>
 
   <div class="col-4 venue card-container mt-3 pl-0">
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-between align-items-center">
       <h1 style='color: white'><%= @tour.name %></h1>
       <div>
         <%= link_to "Search Venues", venues_path, class: "btn" %>
       </div>
     </div>
-    <div class="col-12 venue card-container mt-3 pl-0 card-container-small">
+    <div class="col-12 venue card-container mt-3 pl-0 card-container-small venue-card-tours">
       <% @tour.bookings.each do |booking| %>
         <%= link_to venue_path(booking.venue) do %>
           <div class="card-product col-12" id="venue<%=booking.venue.id%>">
@@ -15,6 +15,7 @@
               <%= cl_image_tag booking.venue.photos.first.key, height: 150, width: 150, crop: :fill, class: 'venue_card_image' %>
             <%  end %>
             <div class="card-product-infos col-9">
+            <div class='d-flex justify-content-between pb-2'>
               <h2>
                 <%= booking.venue.name %>
               </h2>
@@ -24,6 +25,7 @@
                   <%= booking.venue.capacity %>
                 </span>
               </div>
+            </div>
               <% if booking.accepted %>
                 <p> <%= booking.venue.name %> accepted your booking!</p>
               <% elsif booking.accepted == false %>
@@ -36,7 +38,7 @@
         <% end %>
       <% end %>
     </div>
-    <div class="venue_calendar__container calendar_container w-100">
+    <div class="venue_calendar__container calendar_container w-100 mt-2">
       <%= month_calendar do |day| %>
         <%= content_tag :div, class: "calendar-day" do %>
           <% if @dates_booked.include? day.to_s %>
