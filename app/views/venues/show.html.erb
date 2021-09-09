@@ -33,7 +33,7 @@
               <%= f.input :tour_id, label: 'Select Tour', collection: Tour.where(user: current_user), include_blank: false, selected: Tour.first %>
               <div class="venue_calendar__submit-container">
                 <%= link_to 'Back', :back, class: 'btn-back' %>
-                <%= f.button :submit, "Request Booking", class: 'btn ml-5' %>
+                <%= f.button :submit, "Request Booking", class: 'btn btn-small ml-5' %>
               </div>
             <% end %>
           </div>
