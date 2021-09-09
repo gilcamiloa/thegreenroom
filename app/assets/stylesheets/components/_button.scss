@@ -34,6 +34,15 @@
   height: 50px;
 }
 
+.btn-small {
+  height: 50px;
+  padding: 0;
+}
+
+.btn-small__padding {
+  padding-top: 10px;
+}
+
 .btn-login__green {
   border: 4px solid $green;
 }
