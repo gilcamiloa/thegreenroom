@@ -1,0 +1,13 @@
+<div class="youtube-form d-none">
+  <%= simple_form_for(@user, url: user_path, method: :patch) do |f| %>
+    <%= f.error_notification %>
+    <div class="form-inputs">
+      <%= f.input :youtube_playlist,
+                  label: false,
+                  autofocus: true%>
+      <div class="form-actions d-flex justify-content-center">
+        <%= f.button :submit, "Add" %>
+      </div>
+    </div>
+    <% end %>
+</div>

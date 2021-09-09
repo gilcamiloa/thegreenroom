@@ -58,4 +58,20 @@ document.addEventListener('turbolinks:load', () => {
       })
     });
   });
-})
+  const ytIcon = document.querySelector('.fa-youtube');
+  if (ytIcon) {
+    const ytForm = document.querySelector('.youtube-form');
+    ytIcon.addEventListener('click', () => {
+      ytForm.removeAttribute('class', 'd-none');
+      ytIcon.setAttribute('class', 'd-none');
+  });
+};
+  const scIcon = document.querySelector('.fa-soundcloud');
+  if (scIcon) {
+    const scForm = document.querySelector('.soundcloud-form');
+    scIcon.addEventListener('click', () => {
+      scForm.removeAttribute('class', 'd-none');
+      scIcon.setAttribute('class', 'd-none');
+    });
+  };
+});

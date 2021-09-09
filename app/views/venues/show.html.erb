@@ -32,10 +32,7 @@
               <%= f.input :dates, default: [], multiple: true, as: :hidden, html5: true %>
               <%= f.input :tour_id, label: 'Select Tour', collection: Tour.where(user: current_user), include_blank: false, selected: Tour.first %>
               <div class="venue_calendar__submit-container">
-                <%= f.button :submit, class: 'btn' %>
-                <%# <div> %>
-
-                <%# </div> %>
+                <%= f.button :submit, "Request Booking", class: 'btn' %>
               </div>
             <% end %>
           </div>
