@@ -11,7 +11,7 @@
       <% @tour.bookings.each do |booking| %>
         <%= link_to venue_path(booking.venue) do %>
           <% @booking_status = booking.accepted.nil? ? 'pending' : booking.accepted.to_s %>
-          <div class="card-product col-12 card-status-<%= @booking_status %>" id="venue<%=booking.venue.id%>">
+          <div class="card-product col-12 card_status__<%= @booking_status %>" id="venue<%=booking.venue.id%>">
             <% if booking.venue.photos.attached? %>
               <%= cl_image_tag booking.venue.photos.first.key, height: 150, width: 150, crop: :fill, class: 'venue_card_image' %>
             <%  end %>
