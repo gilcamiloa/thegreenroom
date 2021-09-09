@@ -28,10 +28,10 @@
       </div>
     <% else %>
       <div class="d-flex align-items-center justify-content-center placeholder-icon-container mb-2">
-        <div>
-        <%= link_to edit_user_path(@user) do %>
+        <div class='d-flex flex-column align-items-center justify-content-center'>
+          <h2>Add a Youtube Playlist</h2>
           <i class="fab fa-youtube"></i>
-        <% end %>
+          <%= render 'youtube', user: @user %>
         </div>
       </div>
     <% end %>
@@ -44,13 +44,13 @@
           </div>
         </div>
         <% else %>
-        <div class="d-flex align-items-center justify-content-center placeholder-icon-container">
-          <div>
-          <%= link_to edit_user_path(@user) do %>
-            <i class="fab fa-soundcloud"></i>
-          <% end %>
-          </div>
+              <div class="d-flex align-items-center justify-content-center placeholder-icon-container mb-2">
+        <div class='d-flex flex-column align-items-center justify-content-center'>
+          <h2>Add a Soundcloud Playlist</h2>
+          <i class="fab fa-soundcloud"></i>
+          <%= render 'soundcloud', user: @user %>
         </div>
+      </div>
         <% end %>
     </div>
     </div>

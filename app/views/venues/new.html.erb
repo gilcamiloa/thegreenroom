@@ -1,5 +1,5 @@
 <div class='background-image-venues-new vh-100'>
-  <div class="container d-flex align-items-center flex-column form-container">
+  <div class="container d-flex align-items-center flex-column form-container venues-new">
     <h2>Add a Venue</h2>
     <%= simple_form_for(@venue) do |f| %>
     <%= f.error_notification %>
@@ -35,7 +35,7 @@
               <%= link_to Date.parse(day.to_s).strftime("%d"),'',remote: true,:'data-date' => day, data: { controller: 'calendar',calendar_target: "date", action: 'click->calendar#append' } %>
           <% end %>
         <% end %>
-          <%= f.input :available_dates, default: [], multiple: true, as: :hidden, html5: true, class: 'booked_date' %>
+          <%= f.input :available_dates, label: '^ Select Available Dates', default: [], multiple: true, as: :hidden, html5: true, class: 'booked_date' %>
       </div>
 
 
