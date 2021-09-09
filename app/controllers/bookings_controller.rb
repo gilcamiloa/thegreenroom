@@ -19,7 +19,6 @@ class BookingsController < ApplicationController
     end
   end
 
-
   def show
     @booking = Booking.find(params[:id])
   end
@@ -72,14 +71,12 @@ class BookingsController < ApplicationController
   end
 
   def save_booking
-    if @booking.save!
-     if defined?(@tour)
-      redirect_to venues_path
-     else
-       # placeholder path untill we have a bookings page
-      #  redirect_to venue_path(@booking.venue)
-       redirect_to bookings_path(user_id: current_user)
-     end
+    if @booking.save
+      if defined?(@tour)
+        redirect_to venues_path
+      else
+        redirect_to bookings_path(user_id: current_user)
+      end
     else
       redirect_to venue_path(@booking.venue)
     end
