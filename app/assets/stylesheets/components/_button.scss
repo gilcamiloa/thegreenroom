@@ -1,11 +1,14 @@
 .btn {
   color: white !important;
+  // text-shadow: -1px 1px 1px #000;
+  white-space: nowrap;
   background-color: transparent;
   border-radius: 2em;
   border: 0.2em solid $green;
   cursor: pointer;
-  font-size: 3vmin;
-  padding: 0.7em 1.5em;
+  font-size: 2vmin;
+  padding: 0.6em 0.7em;
+  // box-shadow: 3px 3px 4px 2px $hgray;
   text-transform: uppercase;
   transition: all 0.25s ease;
 }
