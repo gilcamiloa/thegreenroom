@@ -3,6 +3,16 @@
 //   height: 85vh;
 // }
 
+.venue_search_address::placeholder {
+  color: white !important;
+  opacity: 0.9;
+}
+
+.venue_search_address:focus {
+    color: black !important;
+    opacity: 1;
+}
+
 .venue_gallery {
   background-color: $gray;
   opacity: .85;
