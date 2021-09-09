@@ -1,4 +1,4 @@
 meta_product_name: "theGreenRoom"
 meta_title: "Enter theGreenRoom - Be your own agent"
 meta_description: "theGreenRoom lets bands and venues organise their own bookings, no middle men required."
-meta_image: "/logo/greenlogo-shadow" # should exist in `app/assets/images/`
+meta_image: "/logo/og-green-logo" # should exist in `app/assets/images/`
