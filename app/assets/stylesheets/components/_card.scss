@@ -105,3 +105,16 @@
   background-color: $hgray;
   border-right: 3px solid $green;
 }
+
+.card_status__pending {
+  border-right: 3px solid $yellow;
+}
+
+.card_status__true{
+  border-right: 3px solid $green;
+}
+
+.card_status__false {
+  border-right: 3px solid $red;
+}
+

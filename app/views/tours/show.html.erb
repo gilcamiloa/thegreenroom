@@ -10,7 +10,8 @@
     <div class="col-12 venue card-container mt-3 pl-0 card-container-small venue-card-tours">
       <% @tour.bookings.each do |booking| %>
         <%= link_to venue_path(booking.venue) do %>
-          <div class="card-product col-12" id="venue<%=booking.venue.id%>">
+          <% @booking_status = booking.accepted.nil? ? 'pending' : booking.accepted.to_s %>
+          <div class="card-product col-12 card_status__<%= @booking_status %>" id="venue<%=booking.venue.id%>">
             <% if booking.venue.photos.attached? %>
               <%= cl_image_tag booking.venue.photos.first.key, height: 150, width: 150, crop: :fill, class: 'venue_card_image' %>
             <%  end %>
@@ -27,11 +28,11 @@
               </div>
             </div>
               <% if booking.accepted %>
-                <p><%= booking.venue.name %> accepted your booking!</p>
+                <p><%= booking.venue.name %> <span class="booking_status">Booking Status: Accepted</span></p>
               <% elsif booking.accepted == false %>
-                <p><%= booking.venue.name %> has declined your booking</p>
+                <p><%= booking.venue.name %> <span class="booking_status">Booking Status: Declined</span></p>
               <% else %>
-                <p>Your booking with <%= booking.venue.name %> is pending</p>
+                <p><%= booking.venue.name %> <span class="booking_status">Booking Status: Pending</span></p>
               <% end %>
             </div>
           </div>
