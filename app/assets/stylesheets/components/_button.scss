@@ -1,13 +1,18 @@
 .btn {
   color: white !important;
   // text-shadow: -1px 1px 1px #000;
+  text-align: center;
+  align-items: center;
   white-space: nowrap;
+  box-sizing: border-box;
+  width: 232px;
+  height: 75px;
   background-color: transparent;
-  border-radius: 2em;
-  border: 0.2em solid $green;
+  border-radius: 40px;
+  border: 4px solid $green;
   cursor: pointer;
   font-size: 2vmin;
-  padding: 0.6em 0.7em;
+  padding: 1em;
   // box-shadow: 3px 3px 4px 2px $hgray;
   text-transform: uppercase;
   transition: all 0.25s ease;
@@ -16,4 +21,28 @@
 .btn:hover {
   background: $green;
   color: white !important;
+}
+
+.btn-login {
+  border: 4px solid $lgray;
+}
+
+.btn-back {
+  color: white !important;
+  text-align: center;
+  align-items: baseline;
+  white-space: nowrap;
+  box-sizing: border-box;
+  width: 232px;
+  height: 75px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 2vmin;
+  margin: 30px;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+}
+
+.btn-back:hover {
+  border-bottom: 4px solid $green;
 }

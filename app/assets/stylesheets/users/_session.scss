@@ -9,3 +9,13 @@
   background-color: $gray;
   opacity: .85;
 }
+
+.registration-anchors {
+  color: white;
+}
+
+.registration-anchors:hover {
+  color: $green;
+  transition: 0.5s;
+}
+
