@@ -137,8 +137,9 @@
 }
 
 .show-background {
-  height: 100vh;
-  width: 100vw;
+  position: absolute;
+  height: 100%;
+  width: 100%;
   opacity: .85;
   background-color: $gray;
 }
