@@ -1,14 +1,10 @@
-.background-image-tours {
+.background-image-venues-new {
   // background: url(asset_path("tours/tours-show-bw"));
-  // background: url(asset_path("tours/tob-heaven"));
+  background: url(asset_path("tours/tob-heaven"));
   // background: url(asset_path("tours/bass-confetti"));
-  background: url(asset_path("tours/bass"));
+  // background: url(asset_path("tours/bass"));
   // background: url(asset_path("tours/drums-confetti"));
   // background: url(asset_path("tours/confetti"));
   background-size: cover;
   height: 100vh;
-}
-
-.venue-card-tours {
-  padding-right: 0px !important;
 }

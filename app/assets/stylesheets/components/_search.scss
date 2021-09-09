@@ -3,6 +3,7 @@
   border: 1px solid $hgray;
   color: white;
   width: 400px;
+  margin-right: 180px;
   &:hover {
     // border: 1px solid white;
     border-color: $green;
@@ -19,4 +20,3 @@
   // box-shadow: none;
   box-shadow: 0 0 0 0.2rem rgba(47, 219, 110, 0.25);
 }
-

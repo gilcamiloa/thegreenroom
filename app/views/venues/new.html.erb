@@ -1,6 +1,6 @@
-<div class='background-image vh-100'>
-  <div class="container d-flex align-items-center flex-column py-5 form-container">
-    <h2>Add a venue</h2>
+<div class='background-image-venues-new vh-100'>
+  <div class="container d-flex align-items-center flex-column form-container">
+    <h2>Add a Venue</h2>
     <%= simple_form_for(@venue) do |f| %>
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -28,7 +28,7 @@
         placeholder: 'Capacity',
         input_html: { class: 'devise_form_input'}%>
 
-      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <%= f.input :photos, label: false, as: :file, input_html: { multiple: true } %>
       <div class="calendar_container w-100 h-100" data-controller="calendar" data-calendar-available_dates="<%= @available_dates %>">
         <%= month_calendar do |day| %>
           <%= content_tag :div, class: "calendar-day", data: {date: day} do %>

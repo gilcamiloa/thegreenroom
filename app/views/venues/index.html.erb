@@ -1,5 +1,5 @@
-<div class='col-12 d-flex flex-row container'>
-  <div class="col-4 venue card-container pt-3 mt-5 pl-0">
+<div class='col-12 d-flex flex-row container background-image-venues'>
+  <div class="col-4 venue card-container card-container-index pt-3 mt-5 pl-0">
     <% @venues.each do |venue| %>
       <%= link_to venue_path(venue) do %>
         <div class="card-product col-12" id="venue<%=venue.id%>">
@@ -11,11 +11,11 @@
             <h2>
               <%= venue.name %>
             </h2>
-              <div>
+            <div>
               <i class="fas fa-users"></i>
               <%= venue.capacity %>
-</div>
             </div>
+          </div>
             <div class='pr-2'>
               <span class="venue">
                 <%= venue.description.truncate(100) %>
