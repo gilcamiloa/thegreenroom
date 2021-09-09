@@ -1,7 +1,7 @@
 
 <div class='background-image-users-edit vh-100'>
   <div class="container d-flex align-items-center flex-column py-5 form-container">
-    <h2>Edit Your Profile</h2>
+    <h2 class="mt-5">Edit Your Profile</h2>
   <%= simple_form_for(@user, url: user_path, method: :patch) do |f| %>
     <%= f.error_notification %>
     <div class="form-inputs">
@@ -11,7 +11,8 @@
                   autofocus: true,
                   input_html: { autocomplete: "email" }%>
       <%= f.input :band_description,
-                  Label: 'Bio',
+                  label: false,
+                  placeholder: 'band description...',
                   autofocus: true%>
       <% if @user.youtube_playlist != nil %>
         <%= f.input :youtube_playlist,
