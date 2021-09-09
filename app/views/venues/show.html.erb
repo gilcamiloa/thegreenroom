@@ -2,20 +2,22 @@
 <div class='show-background'></div>
 <div class="container-fluid text-white d-flex flex-direction-row venue_container pt-5">
   <div class="row w-100 m-0">
-    <div class="col-4">
+    <div class="col-4 pt-3">
       <div class="d-flex flex-column m-0">
         <div class="venue_info venue_info__small d-flex flex-column">
-          <h1 class="text-center"><%= @venue.name %></h1>
-          <h3>About Venue:</h3>
-          <div class="capacity_container d-flex flex-direction-row">
-            <div>
-              <i class="fas fa-users"></i>
+          <h1 class="text-center mb-3"><%= @venue.name %></h1>
+          <div class='d-flex justify-content-between align-items-center mb-2'>
+          <h3>About</h3>
+            <div class="capacity_container d-flex flex-direction-row">
+              <div>
+                <i class="fas fa-users"></i>
+              </div>
+              <span class="px-3">
+                <%= @venue.capacity %>
+              </span>
             </div>
-            <span class="pl-3 pb-2">
-              <%= @venue.capacity %>
-            </span>
           </div>
-          <span class="description pb-2"><%= @venue.description %></span>
+          <span class="description pb-2 mb-5"><%= @venue.description %></span>
         </div>
         <div class="venue_calendar_container">
           <div class="calendar_container p-3 w-100 h-100" data-controller="calendar" data-calendar-available_dates="<%= @available_dates %>">

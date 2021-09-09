@@ -14,20 +14,21 @@
 }
 
 .venue_gallery {
-  background-color: $gray;
-  opacity: .85;
+  // background-color: $gray;
+  // opacity: .85;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100%;
-  width: 100%;
-  padding: 15px;
+  height: 655px;
+  width: 855px;
   align-items: center;
   justify-items: center;
+  margin-top: 55px;
 }
 
 .venue_gallery img {
   height: 300px;
   width: 400px;
+  border-radius: 5px;
 }
 
 .venue_info {
@@ -72,6 +73,7 @@
 .venue_calendar_container {
   background-color: $gray;
   opacity: .85;
+  border-radius: 5px;
 }
 
 .calendar-heading {
