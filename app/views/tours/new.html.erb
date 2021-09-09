@@ -1,13 +1,13 @@
 <div class='container col-12 background-image-tours-new'>
   <div class="container d-flex flex-column align-items-center justify-content-center py-5 form-container">
     <div>
-      <h1>Add a Tour</h1>
+      <h1 class='add-tour'>Add a Tour</h1>
     </div>
     <div>
       <%= simple_form_for @tour do |f| %>
         <%= f.input :name , class: 'form-control' %>
         <%= f.input :photo, as: :file, label: 'Upload a tour poster:' %>
-        <%= f.button :submit , class: 'form-control p-0' %>
+        <%= f.button :submit , class: 'form-control create-tour-btn' %>
       <% end %>
     </div>
   </div>
