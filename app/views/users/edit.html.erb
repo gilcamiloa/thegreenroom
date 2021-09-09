@@ -6,30 +6,34 @@
     <%= f.error_notification %>
     <div class="form-inputs">
       <%= f.input :email,
-                  placeholder: 'email',
+                  label: 'Email',
                   autofocus: true,
                   input_html: { autocomplete: "email" }%>
       <%= f.input :band_description,
-                  placeholder: 'band description',
+                  Label: 'Bio',
                   autofocus: true%>
-      <%= f.input :youtube_playlist,
-                  placeholder: 'youtube playlist url',
-                  autofocus: true%>
-      <%= f.input :soundcloud_playlist,
-                  placeholder: 'soundcloud playlist embed url',
-                  autofocus: true%>
-      <%= f.input :photo, as: :file %>
+      <% if @user.youtube_playlist != nil %>
+        <%= f.input :youtube_playlist,
+                    label: 'Youtube Playlist',
+                    autofocus: true%>
+      <% end %>
+      <% if @user.youtube_playlist != nil %>
+        <%= f.input :soundcloud_playlist,
+                    label: 'Soundcloud Playlist',
+                    autofocus: true%>
+      <% end %>
+      <%= f.input :photo, label: 'Profile Picture', as: :file %>
       <%= f.input :password,
-                  placeholder: 'password',
+                  label: 'Password',
                   hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                   input_html: { autocomplete: "new-password" } %>
       <%= f.input :password_confirmation,
-                  placeholder: 'password confirmation',
+                  label: 'Password Confirmation',
                   input_html: { autocomplete: "new-password" } %>
     </div>
 
     <div class="form-actions d-flex justify-content-center">
-      <%= f.button :submit, "Change" %>
+      <%= f.button :submit, "Update" %>
     </div>
   <% end %>
   </div>
