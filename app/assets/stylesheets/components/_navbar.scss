@@ -31,3 +31,16 @@
     color: $white !important;
   }
 }
+
+.thegreenroom {
+  color: $lgray !important;
+  transition: .3s;
+  &:hover {
+    cursor: pointer;
+    color: white !important;
+  }
+}
+
+.nav-item.dropdown:hover {
+  cursor: pointer;
+}

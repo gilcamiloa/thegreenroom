@@ -1,5 +1,5 @@
 class ToursController < ApplicationController
-  before_action :set_tour, only: %i[show index]
+  before_action :set_tour, only: %i[show index edit update]
 
   def index
     if params[:user_id]
@@ -40,10 +40,20 @@ class ToursController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def update
+    if @tour.update(tour_params)
+      redirect_to tour_path(@tour), notice: "Tour was successfully updated."
+    else
+      render :edit
+    end
+  end
+
   private
 
   def tour_params
-    params.require(:tour).permit(:name, :start_date, :end_date)
+    params.require(:tour).permit(:name, :photo)
   end
 
   def set_tour

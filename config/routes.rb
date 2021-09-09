@@ -22,7 +22,7 @@ Rails.application.routes.draw do
     resources :messages, only: [:new]
   end
 
-  resources :tours, only: [:new, :create, :show, :index] do
+  resources :tours, except: :destroy do
     resources :bookings, only: [:show]
   end
 end
