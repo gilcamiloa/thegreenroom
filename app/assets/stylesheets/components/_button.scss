@@ -1,13 +1,17 @@
 .btn {
   color: white !important;
   // text-shadow: -1px 1px 1px #000;
+  text-align: center;
   white-space: nowrap;
+  box-sizing: border-box;
+  width: 232px;
+  height: 75px;
   background-color: transparent;
-  border-radius: 2em;
-  border: 0.2em solid $green;
+  border-radius: 40px;
+  border: 5px solid $green;
   cursor: pointer;
   font-size: 2vmin;
-  padding: 0.6em 0.7em;
+  padding: 5px 10px;
   // box-shadow: 3px 3px 4px 2px $hgray;
   text-transform: uppercase;
   transition: all 0.25s ease;
@@ -17,3 +21,4 @@
   background: $green;
   color: white !important;
 }
+// 232 75
