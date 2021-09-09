@@ -33,11 +33,18 @@
               <%= f.input :tour_id, label: 'Select Tour', collection: Tour.where(user: current_user), include_blank: false, selected: Tour.first %>
               <div class="venue_calendar__submit-container">
                 <%= f.button :submit, class: 'btn' %>
+                <%# <div> %>
+
+                <%# </div> %>
               </div>
             <% end %>
           </div>
         </div>
       </div>
+      <div class="my-3">
+      <%= link_to 'Back', :back, class: 'btn-back' %>
+      </div>
+
     </div>
     <div class="col-8">
       <div class="ml-2 venue_gallery">
