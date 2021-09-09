@@ -4,10 +4,21 @@ class BookingsController < ApplicationController
       @bookings = Tour.find(params[:tour_id]).bookings
     elsif params[:venue_id]
       @bookings = Venue.find(params[:venue_id]).bookings
+    elsif params[:user_id]
+      @user = User.find(params[:user_id])
+      @bookings = []
+      if @user.is_band
+        @user.bookings.each { |booking| @bookings << booking }
+      else
+        unless @user.venues.empty?
+          @user.venues.each { |venue| venue.bookings.each { |booking| @bookings << booking } }
+        end
+      end
     else
       @bookings = Booking.all
     end
   end
+
 
   def show
     @booking = Booking.find(params[:id])
@@ -63,10 +74,11 @@ class BookingsController < ApplicationController
   def save_booking
     if @booking.save!
      if defined?(@tour)
-      redirect_to tour_path(@tour)
+      redirect_to venues_path
      else
        # placeholder path untill we have a bookings page
-       redirect_to venue_path(@booking.venue)
+      #  redirect_to venue_path(@booking.venue)
+       redirect_to bookings_path(user_id: current_user)
      end
     else
       redirect_to venue_path(@booking.venue)

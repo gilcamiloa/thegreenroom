@@ -1,41 +1,20 @@
-<div class="container card-container pt-5">
-  <% if current_user.is_band == true %>
-    <% current_user.tours.each do |tour| %>
-      <%= link_to tour_path(tour) do %>
-        <div class="card-product">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-          <div class="card-product-infos">
-            <h2><%= tour.name %></h2>
-            <span>
-              start date:
-              <%= tour.start_date.strftime("%y-%m-%d") %>
-            </span>
-            <span>
-              end date:
-              <%= tour.end_date.strftime("%y-%m-%d") %>
-            </span>
-          </div>
+<div class="container card-container">
+  <% @tours.each do |tour| %>
+    <%= link_to tour_path(tour) do %>
+      <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-product-infos">
+          <h2><%= tour.name %></h2>
+          <span>
+            start date:
+            <%= tour.start_date.strftime("%y-%m-%d") %>
+          </span>
+          <span>
+            end date:
+            <%= tour.end_date.strftime("%y-%m-%d") %>
+          </span>
         </div>
-      <% end %>
-    <% end %>
-    <% else %>
-      <% @tours.each do |tour| %>
-      <%= link_to tour_path(tour) do %>
-        <div class="card-product">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-          <div class="card-product-infos">
-            <h2><%= tour.name %></h2>
-            <span>
-              start date:
-              <%= tour.start_date.strftime("%y-%m-%d") %>
-            </span>
-            <span>
-              end date:
-              <%= tour.end_date.strftime("%y-%m-%d") %>
-            </span>
-          </div>
-        </div>
-      <% end %>
+      </div>
     <% end %>
   <% end %>
 </div>
