@@ -18,6 +18,11 @@
   transition: all 0.25s ease;
 }
 
+#search {
+  line-height: 100% !important;
+  padding-top: 10px !important;
+}
+
 .btn:hover {
   background: $green;
   color: white !important;
@@ -44,5 +49,6 @@
 }
 
 .btn-back:hover {
-  border-bottom: 4px solid $green;
+  color: $green !important;
+  text-decoration: none;
 }
