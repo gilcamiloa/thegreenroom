@@ -16,6 +16,23 @@
   }
 }
 
+.card-product-users {
+  overflow: hidden;
+  color: white;
+  background-color: $gray;
+  padding-left: 0px;
+  opacity: .85;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  transition: .1s;
+  border-radius: 4px;
+  &:hover {
+    background-color: $hgray;
+    // border-right: 3px solid $green;
+  }
+}
+
 .card-product img {
   height: 100%;
   width: 120px;

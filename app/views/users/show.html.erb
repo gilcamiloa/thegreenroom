@@ -62,14 +62,14 @@
     <div class="col-12 tour card-container card-container-index pt-3">
       <% @user.tours.each do |tour| %>
       <%= link_to tour_path(tour) do %>
-      <div class="card-product col-12" id="tour<%=tour.id%>">
-      <%# <% if tour.photo.attached? %>
-        <%# <%= cl_image_tag tour.photo.key, height: 150, width: 150, crop: :fill, class: 'tour_card_image' %>
-      <%# <% else %>
+      <div class="card-product-users col-12" id="tour<%=tour.id%>">
+      <% if tour.photo.attached? %>
+        <%= cl_image_tag tour.photo.key, height: 450, width: 900, crop: :fill, class: 'tour_card_image' %>
+      <% else %>
         <div class='tour-poster-placeholder'></div>
-      <%# <% end %>
-          <div class="card-product-infos col-9">
-            <div class='d-flex justify-content-between pb-2 pr-1'>
+      <% end %>
+          <div class="d-flex align-items-center justify-content-left card-product-infos col-9">
+            <div class='pb-2 pr-1'>
               <h2>
                 <%= tour.name %>
               </h2>
