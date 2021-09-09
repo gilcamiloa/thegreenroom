@@ -44,9 +44,10 @@
 
 .about {
   width: auto;
-  height: 630px;
+  height: 638px;
   border: 2px solid $hgray;
   border-radius: 5px;
+  line-height: 30px;
 }
 
 .fa-cog {
@@ -77,4 +78,17 @@
   &:hover {
     color: #FF0000;
   }
+}
+
+.tour-poster-placeholder {
+  height: 150px;
+  width: 150px;
+}
+
+.tours-profile {
+  width: auto;
+  height: 638px;
+  border: 2px solid $hgray;
+  border-radius: 5px;
+  line-height: 30px;
 }
