@@ -533,13 +533,13 @@ venue = Venue.create!(
 venue = Venue.create!(
   {
     user: user,
-    name: 'Sindercombe Social',
+    name: 'Brewhouse',
     capacity: 300,
-    description: "Smart bar with plates displayed on exposed brickwork, hanging lamps plus craft beers and pub grub.",
-    address: "2 Goldhawk Rd, London W12 8QD",
-    latitude: 51.50337336871057,
-    longitude: -0.2239038155007984,
-    available_dates: DATES.sample(rand(5..15))
+    description: "Iconic Hoxton music venue, nestled under three railway arches, in the heart of East London.",
+    address: "397-400 Geffrye St, London E2 8HZ",
+    latitude: 51.530967337900606,
+    longitude: -0.07584273050901925,
+    available_dates: ['Fri, 10 Sep 2021 00:00:00 UTC +00:00']
   }
 )
 
