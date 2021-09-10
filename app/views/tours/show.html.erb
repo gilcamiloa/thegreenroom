@@ -27,13 +27,13 @@
                 </span>
               </div>
             </div>
-            <span>Booking date: <%= booking.dates[0].to_s.split(' ')[0] %><span>
+            <span>Booking Date: <%= booking.dates[0].to_s.split(' ')[0].split('-').reverse.join('-') %><span>
               <% if booking.accepted %>
-                <p><%= booking.venue.name %> <span class="booking_status">Booking Status: Accepted</span></p>
+                <p><span class="booking_status">Booking Status: Accepted</span></p>
               <% elsif booking.accepted == false %>
-                <p><%= booking.venue.name %> <span class="booking_status">Booking Status: Declined</span></p>
+                <p><span class="booking_status">Booking Status: Declined</span></p>
               <% else %>
-                <p><%= booking.venue.name %> <span class="booking_status">Booking Status: Pending</span></p>
+                <p><span class="booking_status">Booking Status: Pending</span></p>
               <% end %>
             </div>
           </div>
