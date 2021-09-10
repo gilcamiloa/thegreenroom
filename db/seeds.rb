@@ -842,23 +842,23 @@ puts "Finished seeding #{Venue.count} venues!"
 #   )
 # end
 
-# results = []
-# 8.times do |i|
-#   response = RestClient.get "https://api.unsplash.com/search/photos?page=#{i + 1}&query=live-music-venues&client_id=#{ENV['UNSPLASH_API_KEY']}&per_page=20"
+results = []
+8.times do |i|
+  response = RestClient.get "https://api.unsplash.com/search/photos?page=#{i + 1}&query=live-music-venues&client_id=#{ENV['UNSPLASH_API_KEY']}&per_page=20"
 
-#   response = JSON.parse(response)
+  response = JSON.parse(response)
 
-#   results += response['results']
-# end
-# group_urls = results.map { |result| result['urls']['small'] }.in_groups_of(4, false)
+  results += response['results']
+end
+group_urls = results.map { |result| result['urls']['small'] }.in_groups_of(4, false)
 
-# Venue.all.each_with_index do |venue, index|
-#   puts "Creating images for #{venue.name}..."
-#   group_urls[index].each_with_index do |url, url_index|
-#     puts "image #{url_index + 1}"
-#     file = URI.open(url)
-#     venue.photos.attach(io: file, filename: "#{venue.name}-#{url_index}.jpg", content_type: 'image/jpg')
-#   end
-# end
+Venue.all.each_with_index do |venue, index|
+  puts "Creating images for #{venue.name}..."
+  group_urls[index].each_with_index do |url, url_index|
+    puts "image #{url_index + 1}"
+    file = URI.open(url)
+    venue.photos.attach(io: file, filename: "#{venue.name}-#{url_index}.jpg", content_type: 'image/jpg')
+  end
+end
 
 puts "Seed complete 🤘"
