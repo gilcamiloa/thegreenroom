@@ -27,6 +27,7 @@
                 </span>
               </div>
             </div>
+            <span>Booking date: <%= booking.dates[0].to_s.split(' ')[0] %><span>
               <% if booking.accepted %>
                 <p><%= booking.venue.name %> <span class="booking_status">Booking Status: Accepted</span></p>
               <% elsif booking.accepted == false %>

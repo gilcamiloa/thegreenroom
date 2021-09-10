@@ -28,9 +28,16 @@ class BookingsController < ApplicationController
   end
 
   def create
-    create_booking
-    update_venue
-    save_booking
+    @booking = Booking.new
+    @booking_dates = params[:booking][:dates].split(',').map do |date|
+      Date.parse(date).to_datetime
+    end
+    @booking_dates = @booking_dates.sort
+    @booking_dates.each do |date|
+      create_booking(date)
+      save_booking(date)
+      update_venue(date)
+    end
   end
 
   def accept
@@ -48,12 +55,9 @@ class BookingsController < ApplicationController
   end
   private
 
-  def create_booking
+  def create_booking(date)
     @booking = Booking.new
-    @booking.dates = params[:booking][:dates].split(',').map do |date|
-      Date.parse(date).to_datetime
-    end
-    @booking.dates = @booking.dates.sort
+    @booking.dates = [date]
     @booking.venue = Venue.find(params[:venue_id])
     unless params[:booking][:tour_id].empty?
       @tour = Tour.find(params[:booking][:tour_id])
@@ -63,19 +67,19 @@ class BookingsController < ApplicationController
     @booking.status = false
   end
 
-  def update_venue
-    @booking.dates.each do |date|
+  def update_venue(date)
       @booking.venue.available_dates.delete(date)
-    end
-    redirect_to venue_path(@venue) unless @booking.venue.update({ available_dates: @booking.venue.available_dates })
+      redirect_to venue_path(@venue) unless @booking.venue.update({ available_dates: @booking.venue.available_dates })
   end
 
-  def save_booking
+  def save_booking(date)
     if @booking.save
-      if defined?(@tour)
-        redirect_to venues_path
-      else
-        redirect_to bookings_path(user_id: current_user)
+      if date == @booking_dates.last
+        if defined?(@tour)
+          redirect_to venues_path
+        else
+          redirect_to bookings_path(user_id: current_user)
+        end
       end
     else
       redirect_to venue_path(@booking.venue)
