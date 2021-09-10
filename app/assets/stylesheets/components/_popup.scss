@@ -8,6 +8,10 @@
   // }
 }
 
+.mapboxgl-popup-content a:hover {
+  text-decoration: none;
+}
+
 .mapboxgl-popup-tip {
   border-top-color: $gray !important;
 }
