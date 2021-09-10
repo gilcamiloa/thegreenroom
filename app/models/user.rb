@@ -11,4 +11,8 @@ class User < ApplicationRecord
   has_many :chatrooms, dependent: :destroy
   has_many :tours, dependent: :destroy
   has_one_attached :photo
+
+  def venue
+    venues.order(created_at: :desc).last
+  end
 end
