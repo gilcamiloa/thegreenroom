@@ -101,12 +101,12 @@ DATES = ['Sat, 11 Sep 2021 00:00:00 UTC +00:00',
 venue = Venue.create!(
   {
     user: user,
-    name: 'KOKO',
-    capacity: 1300,
-    description: "Live, big-name indie, rock and dance music plus club nights in palatial former theatre.",
-    address: "1A Camden High St, London NW1 7JE",
-    latitude: 51.53490452347282,
-    longitude: -0.1382036578297606,
+    name: 'The Lexington',
+    capacity: 200,
+    description: "High-ceilinged bar with sofas, serving US draught beers and whiskies, plus live music room upstairs.",
+    address: "96-98 Pentonville Rd, London N1 9JB",
+    latitude: 51.53189673449426,
+    longitude: -0.11139494400080929,
     available_dates: DATES.sample(rand(5..15))
   }
 )
