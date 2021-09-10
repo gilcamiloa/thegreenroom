@@ -59,9 +59,11 @@ class BookingsController < ApplicationController
     @booking = Booking.new
     @booking.dates = [date]
     @booking.venue = Venue.find(params[:venue_id])
-    unless params[:booking][:tour_id].empty?
-      @tour = Tour.find(params[:booking][:tour_id])
-      @booking.tour = @tour
+    if params[:booking][:tour_id]
+      unless params[:booking][:tour_id].empty?
+        @tour = Tour.find(params[:booking][:tour_id])
+        @booking.tour = @tour
+      end
     end
     @booking.user = current_user
     @booking.status = false
