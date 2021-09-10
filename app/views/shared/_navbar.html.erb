@@ -36,7 +36,7 @@
         <li class="nav-item dropdown">
           <% if user_signed_in? && current_user.photo.present? %>
             <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <% elsif user_signed_in? && current_user.venue.photos.any? %>
+          <% elsif user_signed_in? && current_user.venue&.photos&.any? %>
             <%= cl_image_tag current_user.venue.photos.first.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% else %>
             <%= image_tag(asset_path("placeholder/default-avatar.png"), class:'avatar dropdown-toggle',id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false ) %>
