@@ -16,8 +16,11 @@
         <form action="/venues">
           <input type="search" id="venue_address" class="form-control venue_search_address" name= "query" placeholder="Where do you want to play?" />
         </form>
+        <% else %>
+        <form action="/venues">
+          <input type="search" id="venue_address" class="form-control venue_search_address" name= "query" placeholder="Search venues" />
+        </form>
       <% end %>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
