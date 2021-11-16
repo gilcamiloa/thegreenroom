@@ -64,8 +64,8 @@ document.addEventListener('turbolinks:load', () => {
     ytIcon.addEventListener('click', () => {
       ytForm.removeAttribute('class', 'd-none');
       ytIcon.setAttribute('class', 'd-none');
-  });
-};
+    });
+  };
   const scIcon = document.querySelector('.fa-soundcloud');
   if (scIcon) {
     const scForm = document.querySelector('.soundcloud-form');
